@@ -1,0 +1,26 @@
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 14px 10px;
+}
+ul{
+    padding: 25px;
+}
+li{
+    list-style: none;
+    display: inline;
+}
+li a {
+    background: #222;
+    color: #d4d4d4;
+}
+li a:hover{
+    background: red;
+    color: #fff;
+
+}
+.navigation{
+    background: #222;
+    height: 75px;
+}

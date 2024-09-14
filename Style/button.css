@@ -1,0 +1,17 @@
+.parent{
+    display: grid;
+    place-items: center;
+}
+.button{
+    margin-top: 10px;
+    background-color: darkblue;
+    place-items: center;
+    color: white;
+    height: 50px;
+    width: fit-content;
+}
+.button a{
+    color: white;
+}
+
+
