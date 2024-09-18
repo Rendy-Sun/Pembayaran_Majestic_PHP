@@ -4,9 +4,9 @@ include("Connection/config.php");
 <html>
     <head>
         <title>Riwayat</title>
-        <link rel="stylesheet" type="text/css" href="Style/table.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/table-riwayat-pembayaran-kapal.css"/>
         <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
-
+        <link rel="stylesheet" type="text/css" href="Style/button.css"/>
         <nav class="navigation">
             <ul>
                 <li><a href="form-list-kapal.php">Daftar Kapal</a></li>
@@ -19,10 +19,7 @@ include("Connection/config.php");
     </head>
 
     <body>
-        <table class="table" border="1">
-            <?php 
-                include("Fetch_Data/riwayat-pembayaran-kapal.php");
-            ?>
+        <table id="riwayat" class="table" border="1">
             <thead>
                 <tr>
                     <th scope="col" style="display: none;">Id Kapal</th>
@@ -36,9 +33,14 @@ include("Connection/config.php");
                     <th colspan="2">Action</th>
                 </tr>
             </thead>
+            <?php 
+                include("Fetch_Data/riwayat-pembayaran-kapal.php");
+                
+            ?>
+            
         </table>
-        <div class="parent">
-            <button><a href="form-pembayaran-kapal.php">Tambah Pembayaran</a></button>
+        <div class="row">
+            <a href="form-pembayaran-kapal.php"><input type="button" value="Tambah Pembayaran"></input></a>
         </div>
     </body>
 </html>

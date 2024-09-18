@@ -1,17 +1,12 @@
-.parent{
-    display: grid;
-    place-items: center;
-}
-.button{
-    margin-top: 10px;
-    background-color: darkblue;
-    place-items: center;
+input[type=button]{
+    background-color: #04AA6D;
     color: white;
-    height: 50px;
-    width: fit-content;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 45%;
+    margin-top: 20px;
 }
-.button a{
-    color: white;
-}
-
 
