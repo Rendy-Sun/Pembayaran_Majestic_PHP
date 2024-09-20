@@ -7,15 +7,9 @@
             Pembayaran Majestic Ferry
         </title>
         <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/form-edit-kapal.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/containerForm.css"/>
         <nav class="navigation">
-            <ul>
-                <li><a href="form-list-kapal.php">Daftar Kapal</a></li>
-                <li><a href="form-pembayaran-kapal.php">Pembayaran Kapal</a></li>
-                <li><a href="#">List</a></li>
-                <li><a href="#">Tutorial</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
+            <?php include("navigationBar.php");?>
         </nav>
     </head>
     <body>
@@ -50,24 +44,20 @@
                                 {
                                     $nama_kapal = $row['nama_tipe'];
                                 }
-                                if($nama_kapal == "WAVEMASTER")
-                                {
-                                    $select = "selected";
-                                    echo '<option value ="WAVEMASTER" selected="'.$select.'">WAVEMASTER</option>';
-                                    echo '<option value ="MAJESTIC">MAJESTIC</option>';
-                                }
-                                elseif($nama_kapal == "MAJESTIC")
-                                {
-                                    $select = "selected";
-                                    echo '<option value ="WAVEMASTER">WAVEMASTER</option>';
-                                    echo '<option value ="MAJESTIC" selected="'.$select.'">MAJESTIC</option>';
+                                $sqlSelected = "SELECT * FROM tipe_kapal";
+                                $resultSelected = $dbConnection->query($sqlSelected);
+                                while ($rowSelected = mysqli_fetch_array($resultSelected)) {
+                                    echo '<option value ="'.$rowSelected["nama_tipe"].'">'. $rowSelected["nama_tipe"] .'</option>';
+                                    if($nama_kapal == $rowSelected['nama_tipe']){
+                                        echo '<option hidden value ="'.$rowSelected["nama_tipe"].'" selected="selected">'. $rowSelected["nama_tipe"] .'</option>';
+                                    }
                                 }
                             ?>  
                         </select>
                     </div>
                 </div>
                 <div class="row">
-                    <input type="submit" name="submit" value="Update Kapal"/>
+                    <input type="submit" name="submitUpdateKapal" value="Update Kapal"/>
                 </div>
             </div>                    
         </form>

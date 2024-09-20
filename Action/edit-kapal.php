@@ -1,6 +1,6 @@
 <?php
     include("../Connection/config.php");
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submitUpdateKapal'])){
         $id=$_POST['id'];
         $nama_kapal = $_POST['nama_kapal'];
         $tipe_kapal = $_POST['tipe_kapal'];

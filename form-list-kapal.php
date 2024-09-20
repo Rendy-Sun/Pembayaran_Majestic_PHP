@@ -9,13 +9,7 @@ include("Connection/config.php");
         <link rel="stylesheet" type="text/css" href="Style/button.css"/>
 
         <nav class="navigation">
-            <ul>
-                <li><a href="form-list-kapal.php">Daftar Kapal</a></li>
-                <li><a href="form-pembayaran-kapal.php">Pembayaran Kapal</a></li>
-                <li><a href="#">List</a></li>
-                <li><a href="#">Tutorial</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
+            <?php include("navigationBar.php");?>
         </nav>
     </head>
 

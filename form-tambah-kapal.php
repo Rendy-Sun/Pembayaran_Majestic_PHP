@@ -7,13 +7,7 @@ include("Connection/config.php");
         <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
         <link rel="stylesheet" type="text/css" href="Style/form-tambah-pembayaran.css"/>
         <nav class="navigation">
-            <ul>
-                <li><a href="form-list-kapal.php">Daftar Kapal</a></li>
-                <li><a href="form-pembayaran-kapal.php">Pembayaran Kapal</a></li>
-                <li><a href="#">List</a></li>
-                <li><a href="#">Tutorial</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
+            <?php include("navigationBar.php");?>
         </nav>
     </head>
     <body>
@@ -41,7 +35,7 @@ include("Connection/config.php");
                     </div>
                 </div>
                 <div class="row">
-                    <input type = "submit" value="Tambah" name="tambah"/>
+                    <input type = "submit" value="Tambah" name="submitTambahKapal"/>
                 </div>
             </div>
         </form>
