@@ -35,7 +35,7 @@ input[type=number]{
     box-sizing: border-box;
     resize: vertical;
 }
-input[type=button]{
+input[type=button].riwayatButton{
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -44,6 +44,17 @@ input[type=button]{
     cursor: pointer;
     float: left;
     margin-left: 35%;
+    margin-top: 10px;
+}
+input[type=button].changeButton{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 1%;
     margin-top: 10px;
 }
 label{

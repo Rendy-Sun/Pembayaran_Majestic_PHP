@@ -5,7 +5,7 @@
     <head>
         <title>Pembayaran Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/form-pembayaran-kapal.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-form-pembayaran-kapal.css"/>
         <nav class="navigation">
             <?php include ("navigationbar.php"); ?>
         </nav>    
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-75">
                         <select id="nama_kapal" name="nama_kapal"required>
-                            <option>Pilih Nama Kapal</option>
+                            <option hidden value="">Pilih Nama Kapal</option>
                             <?php
                                 include("Fetch_Data/nama-kapal-option.php");
                             ?>
@@ -38,73 +38,105 @@
                         var lol = document.getElementById('harga').value;
                             if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '70000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '30000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '350658';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '100000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '70000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '30000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '350658';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '100000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '70000';
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '30000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '350658';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '100000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '70000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '30000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '350658';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '100000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '70000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '30000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '350658';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '100000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '70000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '30000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '350658';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '100000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '85000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '35000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '550242';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '120000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '85000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '35000';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '550242';
+                                document.getElementById('harga').disabled = true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '120000';
+                                document.getElementById('harga').disabled = true;
                             }else{
                                 document.getElementById('harga').value = '';
+                                document.getElementById('harga').disabled = false;
                             }
                         ">
-                            <option hidden>Pilih Jenis Pembayaran</option>
+                            <option value="" hidden>Pilih Jenis Pembayaran</option>
                             <?php 
                                 include("Fetch_Data/tujuan-pembayaran-option.php");
                             ?>
@@ -142,6 +174,7 @@
                     <div class="col-75">
                         <input type="number" name="harga" id="harga" required placeholder="0"/>
                     </div>
+                    <input type="button" class="changeButton" value="Change" onclick="document.getElementById('harga').disabled=false;"/>
                 </div>
                 <div class="row">
                     <div class="col-25">
@@ -160,8 +193,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a href="form-riwayat-pembayaran-kapal.php"><input type="button" value="Riwayat"></a>
-                    <input type="submit" name="submitTambahPembayaranKapal" value="Tambah"/>
+                    <a href="form-riwayat-pembayaran-kapal.php"><input type="button" class="riwayatButton" value="Riwayat"></a>
+                    <input type="submit" name="submitTambahPembayaranKapal" value="Tambah" onclick="if(document.getElementById('nama_kapal').value=='' && document.getElementById('tujuan_pembayaran').value==''){alert('Nama Kapal dan Tujuan Pembayaran Wajib diisi!');}"/>
                 </div>
             </div>
         </form>

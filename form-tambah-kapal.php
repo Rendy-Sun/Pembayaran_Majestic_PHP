@@ -5,7 +5,7 @@ include("Connection/config.php");
     <head>
         <title>Pembayaran Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/form-tambah-pembayaran.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-form-tambah-kapal.css"/>
         <nav class="navigation">
             <?php include("navigationBar.php");?>
         </nav>
@@ -28,6 +28,7 @@ include("Connection/config.php");
                     </div>
                     <div class="col-75">
                         <select name="tipe_kapal" required>
+                            <option hidden value="">Pilih Tipe Kapal</option>
                             <?php
                             include("Fetch_Data/tipe_kapal_option.php");
                             ?>

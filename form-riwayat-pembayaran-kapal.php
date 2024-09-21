@@ -4,9 +4,8 @@ include("Connection/config.php");
 <html>
     <head>
         <title>Riwayat</title>
-        <link rel="stylesheet" type="text/css" href="Style/table-riwayat-pembayaran-kapal.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/form-riwayat-pembayaran-kapal.css"/>
         <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/button.css"/>
         <nav class="navigation">
             <?php include("navigationBar.php");?>
         </nav>

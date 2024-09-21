@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-75">
                         <select name="nama_kapal">
-                            <option>Pilih</option>
+                            <option hidden value="">Pilih</option>
                             <?php 
                                 //include("Fetch_Data/nama-kapal-option.php");
                                 $query = "SELECT * FROM daftar_kapal";
@@ -36,6 +36,7 @@
                                         echo '<option hidden value="'.$row_data['nama_kapal'].'" selected >'.$row_data['nama_kapal'].'</option>';
                                     }
                                 }
+                                
                             ?>
                         </select>
                         <input type="submit" name="submitCekMasaBerlaku" value="Cek"/>
@@ -47,7 +48,7 @@
                     </div>
                     <div class="col-75">
                         <select name="masa_berlaku">
-                            <option>Pilih</option>
+                            <option hidden value="">Pilih</option>
                             <?php 
                                 include("Action/cek-masa-berlaku-trayek-kapal.php");
                             ?>
