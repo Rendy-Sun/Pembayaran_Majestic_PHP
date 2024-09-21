@@ -1,7 +1,7 @@
 <?php
     include("../Connection/config.php");
     if(isset($_POST['submitUpdateRiwayatPembayaran'])){
-        $id_pembayaran= $_POST['id'];
+        $id_pembayaran= $_POST['id_pembayaran'];
         $nama_kapal = $_POST['nama_kapal'];
         $tujuan_pembayaran = $_POST['tujuan_pembayaran'];
         $trip = $_POST['trip_kapal'];

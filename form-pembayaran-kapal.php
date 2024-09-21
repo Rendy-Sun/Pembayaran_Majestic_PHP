@@ -38,102 +38,103 @@
                         var lol = document.getElementById('harga').value;
                             if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '70000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '30000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '350658';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 3'){
                                 document.getElementById('harga').value = '100000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '70000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '30000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '350658';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 5'){
                                 document.getElementById('harga').value = '100000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '70000';
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '30000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '350658';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 6'){
                                 document.getElementById('harga').value = '100000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '70000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '30000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '350658';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 7'){
                                 document.getElementById('harga').value = '100000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '70000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '30000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '350658';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 8'){
                                 document.getElementById('harga').value = '100000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '70000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '30000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '350658';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'WM 9'){
                                 document.getElementById('harga').value = '100000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '85000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '35000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '550242';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'MAJESTIC BLISS'){
                                 document.getElementById('harga').value = '120000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'COP Karantina' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '85000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PHQC Karantina' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '35000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'PNBP LABUH' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '550242';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else if(checkTujuan == 'Buku Kesehatan Karantina' && checkKapal == 'MAJESTIC ULTIMATE'){
                                 document.getElementById('harga').value = '120000';
-                                document.getElementById('harga').disabled = true;
+                                document.getElementById('harga').readOnly=true;
                             }else{
                                 document.getElementById('harga').value = '';
-                                document.getElementById('harga').disabled = false;
+                                document.getElementById('harga').readOnly = false;
                             }
                         ">
                             <option value="" hidden>Pilih Jenis Pembayaran</option>
@@ -149,6 +150,7 @@
                     </div>
                     <div class="col-75">
                         <select name="trip_kapal" required>
+                        <option value="" hidden>Pilih Trip Kapal</option>
                             <?php
                                 include("Fetch_Data/trip-option.php");
                             ?>
@@ -172,9 +174,9 @@
                         <label>Harga Pembayaran </label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="harga" id="harga" required placeholder="0"/>
+                        <input type="number" name="harga" id="harga" required placeholder="0" readonly="readonly"/>
                     </div>
-                    <input type="button" class="changeButton" value="Change" onclick="document.getElementById('harga').disabled=false;"/>
+                    <input type="button" class="changeButton" value="Change" onclick="document.getElementById('harga').readOnly=false;"/>
                 </div>
                 <div class="row">
                     <div class="col-25">
