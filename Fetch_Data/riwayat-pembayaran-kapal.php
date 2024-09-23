@@ -19,6 +19,13 @@
     if($halaman > 1){
         $noUrut = ($halaman -1) *10; 
     }
+
+    $startpagination = 1;
+    $limitpagination = 10;
+    if(isset($_POST['next'])){
+        $startpagination +1;
+        $limitpagination +1;
+    }   
     
     while($row_data = mysqli_fetch_array($data_pembayaran)){
         $noUrut++;
