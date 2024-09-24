@@ -5,7 +5,7 @@ include("Connection/config.php");
     <head>
         <title>Riwayat</title>
         <link rel="stylesheet" type="text/css" href="Style/form-riwayat-pembayaran-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <nav class="navigation">
             <?php include("navigationBar.php");?>

@@ -4,7 +4,7 @@
 <html>
     <head>
         <title>Pembayaran Majestic Ferry</title>
-        <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-form-edit-riwayat-pembayaran-kapal.css"/>    
         <nav class="navigation">
             <?php include("navigationBar.php");?>

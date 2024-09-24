@@ -6,10 +6,12 @@ a{
 }
 ul{
     padding: 25px;
+    width: 100%;
 }
 li{
     list-style: none;
-    display: inline;
+    display: inline-block;
+    width: fit-content;
 }
 li a {
     background: #222;

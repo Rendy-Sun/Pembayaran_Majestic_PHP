@@ -5,7 +5,7 @@ include("Connection/config.php");
     <head>
         <title>Daftar Kapal Majestic</title>
         <link rel="stylesheet" type="text/css" href="Style/form-list-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/navigationBar.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
 
         <nav class="navigation">
             <?php include("navigationBar.php");?>
