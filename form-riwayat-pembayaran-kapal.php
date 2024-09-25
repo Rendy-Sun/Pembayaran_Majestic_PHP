@@ -58,10 +58,15 @@ include("Connection/config.php");
                         $startpagination +=1;
                     }              
                     for($x=$startpagination;$x<=$limitpagination;$x++){
-                        
-                        ?>
-                        <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x?>"><?php echo $x; ?></a></li>
-                        <?php
+                        if($x > ($jumlah_data/$batas))
+                        {
+
+                        }else{
+                            ?>
+                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x?>"><?php echo $x; ?></a></li>
+                            <?php
+                        }
+
                     }
                     ?>
                 <?php 

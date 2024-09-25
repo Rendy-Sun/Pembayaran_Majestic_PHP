@@ -4,9 +4,8 @@ include("Connection/config.php");
 <html>
     <head>
         <title>Pembayaran Majestic Ferry</title>
-        <link rel="stylesheet" type="text/css" href="style-navigationBar.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-form-tambah-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <nav class="navigation">
             <?php include("navigationBar.php");?>
         </nav>

@@ -35,7 +35,7 @@
             echo "<td>". $row_data["catatan"] ."</td>";
             //echo "<td>". $row["tipe_kapal_id"] ."</td>";
             echo "<td>";
-            echo "<a href = '####?id=".$row_data['id']."'>Edit</a></td>";
+            echo "<a href = 'form-edit-riwayat-penerimaan-saldo-pembayaran.php?id=".$row_data['id']."'>Edit</a></td>";
             echo "<td>";
             echo "<a href = 'Action/hapus-riwayat-penerimaan-saldo-pembayaran.php?id=".$row_data['id']."'>Hapus</a>";
             echo "</td>";
