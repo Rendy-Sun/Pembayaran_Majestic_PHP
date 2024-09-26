@@ -34,6 +34,9 @@ include("Connection/config.php");
                 ?>
             </tbody>
         </table>
+        <p>
+            <label class="jumlahLabel">Jumlah Data: <?php echo $jumlah_data?></label>
+        </p>
         <nav>
             <ul class="pagination justify-content-center">
                 <li class="page-item">

@@ -7,13 +7,13 @@
             Pembayaran Majestic Ferry
         </title>
         <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-form-trayek-kapal.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-tambah-trayek-kapal.css"/>
         <nav class="navigation">
             <?php include("navigationBar.php");?>
         </nav>
     </head>
     <body>
-        <form action ="#" method="POST">
+        <form action ="Action/tambah-trayek-kapal.php" method="POST">
             <div class="container">
                 <header>
                     <h1>Trayek Kapal</h1>
@@ -39,21 +39,22 @@
                                 
                             ?>
                         </select>
-                        <input type="submit" name="submitCekMasaBerlaku" value="Cek"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <label>Masa Berlaku </label>
+                        <label>Berlaku Dari </label>
                     </div>
                     <div class="col-75">
-                        <select name="masa_berlaku">
-                            <option hidden value="">Pilih</option>
-                            <?php 
-                                include("Action/cek-masa-berlaku-trayek-kapal.php");
-                            ?>
-                        </select>
-                        <input type="submit" name="submitCekNomorTrayek"value="Cek"/>
+                        <input type="date" name="dateBerlakuDari">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Berlaku Sampai </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" name="dateBerlakuSampai">
                     </div>
                 </div>
                 <div class="row">
@@ -61,19 +62,11 @@
                         <label>Nomor Trayek Kapal </label>
                     </div>
                     <div class="col-75">
-                        <input type="text" value="<?php include("Action/cek-nomor-trayek-kapal.php");?>" disabled="disabled"/>
+                        <input type="text" name="nomorTrayek"/>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-25">
-                        <label>Nomor MMSI Kapal </label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" value="<?php include("Action/cek-mmsi-kapal.php"); ?>" disabled="disabled"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <a href="form-tambah-trayek-kapal.php"><input type="button" value="Tambah Trayek"></a>
+                    <input type="submit" name="submitTrayek" value="Tambah"/>
                 </div>
             </div>                    
         </form>
