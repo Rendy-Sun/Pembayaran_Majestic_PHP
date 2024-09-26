@@ -3,13 +3,16 @@ include("Connection/config.php");
 ?>
 <html>
     <head>
-        <title>Riwayat</title>
-        <link rel="stylesheet" type="text/css" href="Style/form-riwayat-pembayaran-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
+        <title>Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
-        <nav class="navigation">
-            <?php include("navigationBar.php");?>
-        </nav>
+        <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-pembayaran-kapal.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar-2.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <?php
+            include("navigationBar-2.html");
+        ?>
     </head>
 
     <body>
