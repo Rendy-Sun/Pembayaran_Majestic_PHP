@@ -4,13 +4,13 @@
 <html>
     <head>
         <title>Pembayaran Majestic Ferry</title>
-        <link rel="stylesheet" type="text/css" href="Style/style-edit-riwayat-pembayaran-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar-2.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-form-edit-riwayat-pembayaran-kapal.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-            include("navigationBar-2.html");
+            include("navigationBar.html");
         ?>
     </head>
     <body>
@@ -233,7 +233,7 @@
                         <label>Harga Pembayaran </label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="harga"required placeholder="0" id="harga" readonly="readonly"/>
+                        <input type="number" name="harga"required placeholder="0" id="harga" readonly="readonly" value="<?php include("Fetch_Data/edit-riwayat-pembayaran-kapal.php"); echo $hargaTransaksi; ?>" />
                     </div>
                     <input type="button" class="changeButton" value="Change" onclick="document.getElementById('harga').readOnly=false;"/>
                 </div>
@@ -242,7 +242,7 @@
                         <label>Tanggal Pembayaran </label>
                     </div>
                     <div class="col-75">
-                        <input type="date" name="tanggal_transaksi" required/>
+                        <input type="date" name="tanggal_transaksi" required value="<?php include("Fetch_Data/edit-riwayat-pembayaran-kapal.php"); echo $tanggalTransaksi; ?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -250,7 +250,7 @@
                         <label>Catatan Pembayaran </label>
                     </div>
                     <div class="col-75">
-                        <textarea name="catatan_pembayaran"></textarea>
+                        <textarea name="catatan_pembayaran"><?php include("Fetch_Data/edit-riwayat-pembayaran-kapal.php"); echo $catatanTransaksi; ?></textarea>
                     </div>
                 </div>
                 <div class="row">

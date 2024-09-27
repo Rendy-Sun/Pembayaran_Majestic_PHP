@@ -5,12 +5,12 @@
     <head>
         <title>Pembayaran Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-edit-riwayat-penerimaan-saldo-pembayaran.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar-2.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-            include("navigationBar-2.html");
+            include("navigationBar.html");
         ?>
     </head>
     <body>
@@ -120,7 +120,7 @@
                         <label>Total COP Karantina </label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="cop" id="cop" readonly="readonly" placeholder="0"/>
+                        <input type="number" name="cop" id="cop" readonly="readonly" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $cop; ?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -128,7 +128,7 @@
                         <label>Total PHQC Karantina</label>           
                     </div>
                     <div class="col-75">
-                        <input type="number" name="phqc" id="phqc" readonly="readonly" placeholder="0"/>
+                        <input type="number" name="phqc" id="phqc" readonly="readonly" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $phqc ?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -136,7 +136,7 @@
                         <label>Total PNBP LABUH</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="labuh" id="labuh" readonly="readonly" placeholder="0"/>
+                        <input type="number" name="labuh" id="labuh" readonly="readonly" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $labuh; ?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -144,7 +144,7 @@
                         <label>Total PNBP MASTER CABLE (MC)</label>  
                     </div>
                     <div class="col-75">
-                        <input type="number" name="mc" id="mc" placeholder="0" onchange="
+                        <input type="number" name="mc" id="mc" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $mc; ?>" onchange="
                         copvalue =document.getElementById('cop').value;
                         phqcvalue = document.getElementById('phqc').value;
                         labuhvalue = document.getElementById('labuh').value;
@@ -169,7 +169,7 @@
                         <label>Total PNBP RAMBU</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="rambu" id="rambu" placeholder="0" onchange="
+                        <input type="number" name="rambu" id="rambu" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $rambu; ?>" onchange="
                         copvalue =document.getElementById('cop').value;
                         phqcvalue = document.getElementById('phqc').value;
                         labuhvalue = document.getElementById('labuh').value;
@@ -194,7 +194,7 @@
                         <label>Total Buku Kesehatan Karantina </label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="buku" id="buku" placeholder="0" onchange="
+                        <input type="number" name="buku" id="buku" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $buku; ?>" onchange="
                         copvalue =document.getElementById('cop').value;
                         phqcvalue = document.getElementById('phqc').value;
                         labuhvalue = document.getElementById('labuh').value;
@@ -219,7 +219,7 @@
                         <label>Total Saldo</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" readonly="readonly" placeholder="0" name="totalsaldo" id="totalsaldo"/>
+                        <input type="number" readonly="readonly" placeholder="0" name="totalsaldo" id="totalsaldo" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $totalSaldo; ?>"/>
                     </div>
                 </div>
 
@@ -228,7 +228,7 @@
                         <label>Total Trip</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="totaltrip" id="totaltripKapal" placeholder="0" readonly="readonly"/>
+                        <input type="number" name="totaltrip" id="totaltripKapal" placeholder="0" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $trip; ?>"/>
                     </div>
                 </div>
                 
@@ -237,7 +237,7 @@
                         <label>Catatan Penerimaan</label>
                     </div>
                     <div class="col-75">
-                        <textarea name="catatan"></textarea>
+                        <textarea name="catatan"><?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $catatan; ?></textarea>
                     </div>
                 </div>
 
