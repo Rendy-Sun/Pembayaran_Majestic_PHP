@@ -6,7 +6,6 @@
         <title>Pembayaran Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-edit-riwayat-penerimaan-saldo-pembayaran.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
@@ -14,12 +13,12 @@
         ?>
     </head>
     <body>
-        <form action="#" method="POST">
+        <form action="Action/edit-riwayat-penerimaan-saldo-pembayaran.php" method="POST">
             <div class="container">
             <header><h1>Edit Riwayat Penerimaan Saldo Pembayaran</h1></header>
                 <div class="row">
                     <p>
-                    <input type="hidden" value="<?php include("Fetch_Data/fetch-id-riwayat-penerimaan-saldo-pembayaran.php"); echo $id_penerimaan ?>"/>
+                    <input type="hidden" name="id_penerimaan" value="<?php include("Fetch_Data/fetch-id-riwayat-penerimaan-saldo-pembayaran.php"); echo $id_penerimaan ?>"/>
                     </p>
                     <div class="col-25">
                         <label>Tanggal Penerimaan Saldo Pembayaran</label>
@@ -242,7 +241,7 @@
                 </div>
 
                 <div class="row">
-                    <input type="submit" name="submitPenerimaanSaldoPembayaran" value="Tambah"/>
+                    <input type="submit" name="submitPenerimaanSaldoPembayaran" value="Edit"/>
                 </div>
             </div>
         </form>

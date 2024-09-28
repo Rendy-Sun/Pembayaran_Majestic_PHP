@@ -8,7 +8,6 @@
         </title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-trayek-kapal.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
@@ -76,7 +75,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a href="form-tambah-trayek-kapal.php"><input type="button" value="Tambah Trayek"></a>
+                    <div class="col-25">
+                        <a href="form-daftar-trayek-kapal.php"><input type="button" value="Daftar Trayek"></a>
+                    </div>
+                    <div class="col-75">
+                        <a href="form-tambah-trayek-kapal.php"><input type="button" value="Tambah Trayek"></a>
+                    </div>
                 </div>
             </div>                    
         </form>

@@ -9,12 +9,20 @@
         $masaSampai = date("n/j/Y", strtotime($berlakuSampai));
         $masaBerlaku = $masaDari." - ".$masaSampai;
     }
-    $query="INSERT INTO pkka_kapal (kapal_id, nomor_trayek, berlaku_dari, berlaku_sampai, masa_berlaku) VALUES((SELECT id FROM daftar_kapal WHERE nama_kapal='$namaKapal'), '$nomorTrayek', '$berlakuDari', '$berlakuSampai', '$masaBerlaku')";
-    $result = $dbConnection->query($query);
-    if($result){
-        header('Location: ../form-tambah-trayek-kapal.php');
+    $queryCheck = "SELECT * FROM pkka_kapal WHERE kapal_id =(SELECT id FROM daftar_kapal WHERE nama_kapal = '$namaKapal') AND masa_berlaku='$masaBerlaku'";
+    $resultCheck = $dbConnection->query($queryCheck);
+    $checker=mysqli_num_rows($resultCheck);
+    if($checker > 0 ){
+        echo '<script>alert("Data Trayek Sudah Ada Untuk Periode Tanggal Ini !"); location.href="../form-tambah-trayek-kapal.php";</script>';
+    }else{
+        $query="INSERT INTO pkka_kapal (kapal_id, nomor_trayek, berlaku_dari, berlaku_sampai, masa_berlaku) VALUES((SELECT id FROM daftar_kapal WHERE nama_kapal='$namaKapal'), '$nomorTrayek', '$berlakuDari', '$berlakuSampai', '$masaBerlaku')";
+        $result = $dbConnection->query($query);
+        if($result){
+            header('Location: ../form-tambah-trayek-kapal.php');
+        }
+        else{
+            die('GAGAL');
+        }
     }
-    else{
-        die('GAGAL');
-    }
+     
 ?>

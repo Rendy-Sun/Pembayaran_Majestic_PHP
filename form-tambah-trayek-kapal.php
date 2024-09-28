@@ -8,7 +8,6 @@
         </title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-tambah-trayek-kapal.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
@@ -26,7 +25,7 @@
                         <label>Nama Kapal </label>
                     </div>
                     <div class="col-75">
-                        <select name="nama_kapal">
+                        <select name="nama_kapal" required>
                             <option hidden value="">Pilih</option>
                             <?php 
                                 //include("Fetch_Data/nama-kapal-option.php");
@@ -49,7 +48,7 @@
                         <label>Berlaku Dari </label>
                     </div>
                     <div class="col-75">
-                        <input type="date" name="dateBerlakuDari">
+                        <input type="date" name="dateBerlakuDari" required>
                     </div>
                 </div>
                 <div class="row">
@@ -57,7 +56,7 @@
                         <label>Berlaku Sampai </label>
                     </div>
                     <div class="col-75">
-                        <input type="date" name="dateBerlakuSampai">
+                        <input type="date" name="dateBerlakuSampai" required>
                     </div>
                 </div>
                 <div class="row">
@@ -65,11 +64,11 @@
                         <label>Nomor Trayek Kapal </label>
                     </div>
                     <div class="col-75">
-                        <input type="text" name="nomorTrayek"/>
+                        <input type="text" name="nomorTrayek" required/>
                     </div>
                 </div>
                 <div class="row">
-                    <input type="submit" name="submitTrayek" value="Tambah"/>
+                    <input type="submit" name="submitTrayek" id="tambahSubmit" value="Tambah"/>
                 </div>
             </div>                    
         </form>
