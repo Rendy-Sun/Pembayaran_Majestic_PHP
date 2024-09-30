@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="Style/style-form-pembayaran-kapal.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <?php
-            include("navigationBar.html");
+            include("navigationBar-3.html");
         ?>
     </head>
     <body>
