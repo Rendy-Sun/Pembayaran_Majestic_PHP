@@ -2,7 +2,7 @@
 include("../Connection/config.php");
 if(isset($_POST['submitData']))
 {
-    $nama_kapal = $_POST['nama_kapal'];
+    $nama_kapal = $_POST['kapal'];
     $imo = $_POST['imo'];
     $call_sign = $_POST['call_sign'];
     $mmsi = $_POST['mmsi'];
