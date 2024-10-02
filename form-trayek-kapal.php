@@ -25,7 +25,7 @@
                         <label>Nama Kapal </label>
                     </div>
                     <div class="col-75">
-                        <select name="nama_kapal">
+                        <select name="nama_kapal" onchange="this.form.submit()">
                             <option hidden value="">Pilih</option>
                             <?php 
                                 //include("Fetch_Data/nama-kapal-option.php");
@@ -41,7 +41,6 @@
                                 
                             ?>
                         </select>
-                        <input type="submit" name="submitCekMasaBerlaku" value="Cek"/>
                     </div>
                 </div>
                 <div class="row">
