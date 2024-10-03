@@ -26,7 +26,7 @@ label{
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-input[type=submit]{
+input[type=submit].submitTambah{
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -60,8 +60,12 @@ input[type=submit]{
 }
 
 @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit]{
+    .col-25, .col-75, label, select, input[type=text],input[type=date]{
         width: 100%;
+        margin: auto;
         margin-top: 0;
+    }
+    input[type=submit].submitTambah{
+        margin-top: 10%;
     }
 }

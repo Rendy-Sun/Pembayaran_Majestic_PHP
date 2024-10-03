@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input type="submit" name="submitTrayek" id="tambahSubmit" value="Tambah"/>
+                    <input type="submit" name="submitTrayek" id="tambahSubmit" class="submitTambah" value="Tambah"/>
                 </div>
             </div>                    
         </form>

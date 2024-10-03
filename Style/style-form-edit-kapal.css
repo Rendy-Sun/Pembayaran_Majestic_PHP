@@ -1,6 +1,6 @@
 header{
     margin: auto;
-    margin-left: 40%;
+    text-align: center;
 }
 input[type=text], select{
     width: 100%;
@@ -82,8 +82,16 @@ input[type=submit]{
     clear: both;
 }
 @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit]{
+    .col-25, .col-75, select, input[type=text], label{
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 0;
+    }
+    input[type="submit"]{
+        margin-top: 50px;
+    }
+    .container{
+        height: 100%;
     }
 }

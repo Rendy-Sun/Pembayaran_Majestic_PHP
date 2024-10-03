@@ -75,10 +75,10 @@
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <a href="form-daftar-trayek-kapal.php"><input type="button" value="Daftar Trayek"></a>
+                        <a href="form-daftar-trayek-kapal.php"><input type="button" class="buttonDaftar" value="Daftar Trayek"></a>
                     </div>
                     <div class="col-75">
-                        <a href="form-tambah-trayek-kapal.php"><input type="button" value="Tambah Trayek"></a>
+                        <a href="form-tambah-trayek-kapal.php"><input type="button" class="buttonTambah" value="Tambah Trayek"></a>
                     </div>
                 </div>
             </div>                    

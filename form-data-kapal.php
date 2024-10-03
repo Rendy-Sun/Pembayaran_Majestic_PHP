@@ -15,7 +15,7 @@
             <header><h2>Data Kapal</h2></header>
                 <div class="row">
                     <div class="column-1">
-                        <label>Nama Kapal</label>
+                        <label class="header">Nama Kapal</label>
                     </div>
                     <div class="column-2">
                         <select name="nama_kapal" onchange="this.form.submit()">
@@ -31,6 +31,7 @@
                                 }
                             ?>
                         </select>
+                        <a href="form-tambah-kapal.php"><input type="button" class="buttonAdd" value="[+]"></a>
                     </div>
                 </div>
         </form>
@@ -42,14 +43,14 @@
             </div>
                 <div class="subcolumn-2">
                     <input type="text" name="imo" id="imo" readonly="readonly" onchange="document.getElementById('imo').readOnly=true;" value="<?php include("Fetch_Data/fetch-data-kapal.php");echo $imo;?>"/>
-                    <input type="button" value="..." onclick="document.getElementById('imo').readOnly=false;">
+                    <input type="button" class="editData" value="..." onclick="document.getElementById('imo').readOnly=false;">
                     </div>
                     <div class="subcolumn-3">
                         <label>Call Sign</label>
                     </div>
                     <div class="subcolumn-4">
                         <input type="text" name="call_sign" id="call_sign" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $callSign;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('call_sign').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('call_sign').readOnly=false;">
                     </div>
                 </div>
                 <div class="row">
@@ -58,7 +59,7 @@
                     </div>
                     <div class="subcolumn-2">
                         <input type="text" name="mmsi" id="mmsi" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $mmsi;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('mmsi').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('mmsi').readOnly=false;">
 
                     </div>
                     <div class="subcolumn-3">
@@ -66,7 +67,7 @@
                     </div>
                     <div class="subcolumn-4">
                         <input type="text" name="bendera" id="bendera" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $bendera;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('bendera').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('bendera').readOnly=false;">
 
                     </div>
                 </div>
@@ -76,7 +77,7 @@
                     </div>
                     <div class="subcolumn-2">
                         <input type="text" name="kapasitas" id="kapasitas" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $kapasitas;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('kapasitas').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('kapasitas').readOnly=false;">
 
                     </div>
                     <div class="subcolumn-3">
@@ -84,7 +85,7 @@
                     </div>
                     <div class="subcolumn-4">
                         <input type="text" name="max" id="max" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $max;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('max').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('max').readOnly=false;">
 
                     </div>
                 </div>
@@ -94,7 +95,7 @@
                     </div>
                     <div class="subcolumn-2">
                         <input type="text" name="depan" id="depan" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $depan;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('depan').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('depan').readOnly=false;">
 
                     </div>
                     <div class="subcolumn-3">
@@ -102,22 +103,15 @@
                     </div>
                     <div class="subcolumn-4">
                         <input type="text" name="belakang" id="belakang" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-kapal.php"); echo $belakang;?>"/>
-                        <input type="button" value="..." onclick="document.getElementById('belakang').readOnly=false;">
+                        <input type="button" class="editData" value="..." onclick="document.getElementById('belakang').readOnly=false;">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="subcolumn-1">
-                    </div>
-                    <div class="subcolumn-2">
-                        <input type="submit" name="submitData" value="Edit Data Kapal"/>
-                    </div>
-                    <div class="subcolumn-3">
-                        <a href="form-tambah-data-kapal.php"><input type="button" value="Tambah Data Kapal"></a>
-                    </div>
-                    <div class="subcolumn-4">
+                <input type="submit" name="submitData" class="buttonEdit" value="Edit Data Kapal"/>
 
-                    </div>
+                <a href="form-tambah-data-kapal.php"><input type="button" class="buttonTambah" value="Tambah Data Kapal"></a>
+
                 </div>
         </form>
         </div>

@@ -34,6 +34,26 @@ input[type=button]{
     border-radius: 4px;
     cursor: pointer;
 }
+input[type=button].buttonTambah{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+input[type=submit].buttonEdit{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 25%;
+    margin-top: 5%;
+}
 input[type=button].changeButton{
     background-color: #04AA6D;
     color: white;
@@ -62,7 +82,6 @@ input[type=submit]{
 .container{
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px;
     width: 100%;
     min-height: 200px;
 }
@@ -117,8 +136,41 @@ input[type=submit]{
     clear: both;
 }
 @media screen and (max-width: 600px) {
-    .column-1, .column-2, input[type=submit]{
+    .column-1{
+        width: 40%;
+    }
+    .column-2{
+        width: 60%;
+    }
+    label{
+        text-align: center;
+    }
+    input[type=text]{
         width: 100%;
-        margin-top: 0;
+    }
+    .subcolumn-1,.subcolumn-3{
+        width: 25%;
+    }
+    select{
+        width: 75%;
+    }
+    input[type=button].buttonAdd{
+        float: right;
+        text-align: center;
+        margin-right: 1%;
+    }
+    input[type=button].buttonTambah{
+        float: right;
+        margin-top: 10%;
+        margin-right: 10%;
+    }
+    input[type=submit].buttonEdit{
+        float: left;
+        margin-top: 10%;
+        margin-left: 10%;
+        position: absolute;
+    }
+    input[type=button].editData{
+        float: right;
     }
 }
