@@ -16,6 +16,8 @@
     </head>
     
     <body>
+    <header><h2>Riwayat Penerimaan Saldo</h2></header>
+        <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
                 <tr>
@@ -36,6 +38,8 @@
                 include("Fetch_Data/riwayat-penerimaan-saldo-pembayaran.php");
             ?>
         </table>
+        </div>
+        <div class="pagination-div">
         <nav>
             <ul class="pagination justify-content-center">
                 <li class="page-item">
@@ -80,8 +84,11 @@
                     </li>
             </ul>
         </nav>
+        </div>
         <div class="row">
-            <a href="form-tambah-penerimaan-saldo-pembayaran.php"><input type="button" value="Tambah Pembayaran"></input></a>
+            <div class="buttonField">
+            <a href="form-tambah-penerimaan-saldo-pembayaran.php"><input type="button" class="buttonTambah" value="Tambah Penerimaan"></input></a>
+            </div>
         </div>
     </body>
 </html>

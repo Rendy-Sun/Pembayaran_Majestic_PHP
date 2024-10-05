@@ -5,14 +5,16 @@
     <head>
         <title>Data Kapal</title>
         <link rel="stylesheet" href="Style/style-form-data-kapal.css"/>
+        <link rel="stylesheet"href="Style/style-navigationBar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <?php 
             include("navigationBar-3.html")
         ?>
     </head>
     <body>
         <div class="container">
+        <header class="headerTittle"><h1>Data Kapal</h1></header>
         <form action="#" method="POST">
-            <header><h2>Data Kapal</h2></header>
                 <div class="row">
                     <div class="column-1">
                         <label class="header">Nama Kapal</label>

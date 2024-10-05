@@ -88,8 +88,24 @@ input[type=submit]{
     clear: both;
 }
 @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit]{
+    .col-25, .col-75{
         width: 100%;
         margin-top: 0;
+    }
+    label{
+        margin: 0px;
+    }
+    input[type=number]{
+        margin: 0px;
+    }
+    input[type=date]{
+        margin: 0;
+    }
+    textarea{
+        margin: 0;
+    }
+    header{
+        text-align: center;
+        margin: 0%;
     }
 }

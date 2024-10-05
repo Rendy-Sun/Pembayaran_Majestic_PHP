@@ -93,8 +93,24 @@ input[type=submit]{
     clear: both;
 }
 @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit]{
+    header{
+        text-align: center;
+        margin: 0;
+    }
+    .col-25, .col-75{
         width: 100%;
         margin-top: 0;
+    }
+    input[type=button].riwayatButton{
+        float: left;
+        margin: 0;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    input[type=submit].submitTambah{
+        float: right;
+        margin: 0;
+        margin-right: 10%;
+        margin-top: 10%;
     }
 }

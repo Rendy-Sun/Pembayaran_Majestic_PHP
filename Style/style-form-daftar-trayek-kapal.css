@@ -33,5 +33,16 @@ input[type=button]{
     margin-left: 45%;
     margin-top: 20px;
 }
+@media screen and (max-width: 600px) {
+    .scroll{
+        overflow-y: scroll;
+        height: auto;
+        scale: 0.9;
+    }
+    input[type=button]{
+        margin-top: 5px;
+        margin-left: 40%;
+    }
+}
 
 

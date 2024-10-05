@@ -94,6 +94,7 @@ input[type=submit].submitCekTransaksi{
     width: 25%;
     margin-top: 6px;
 }
+
 .subcolumn-3{
     float: left;
     width: 25%;
@@ -120,8 +121,32 @@ input[type=submit].submitCekTransaksi{
     clear: both;
 }
 @media screen and (max-width: 600px) {
-    .column-1, .column-2, input[type=submit]{
+    header{
+        text-align: center;
+        margin: 0%;
+    }
+    input[type=submit].submitCekTransaksi{
+        margin-top: 25%;
+    }
+    input[type=date], select{
         width: 100%;
-        margin-top: 0;
+        margin-top: 8%;
+    }
+    .container{
+        padding: 1px 0px;
+    }
+    .subcolumn-1, .subcolumn-3{
+        scale: 0.6;
+        width: 15%;
+    }
+    .subcolumn-2, .subcolumn-4{
+        scale: 0.6;
+        width: 35%;
+    }
+    input[type=number]{
+        margin-top: 15%;
+    }
+    input[type=number].large{
+        margin-top: 30%;
     }
 }

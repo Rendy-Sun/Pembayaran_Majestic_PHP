@@ -17,6 +17,7 @@ include("Connection/config.php");
     <body>
         <div class="container">
         <div class="row">
+            <div class="scroll">
             <table class="table" border="1">
                 <?php 
                     include("Fetch_Data/daftar-trayek-kapal.php");
@@ -31,6 +32,7 @@ include("Connection/config.php");
                     </tr>
                 </thead>
             </table>
+            </div>
         </div>
             <div class="row">
                 <a href="form-trayek-kapal.php"><input type="button" value="Kembali"></input></a>

@@ -14,6 +14,8 @@ include("Connection/config.php");
     </head>
 
     <body>
+    <header><h2>Riwayat Pembayaran Kapal</h2></header>
+    <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
                 <tr>
@@ -35,9 +37,11 @@ include("Connection/config.php");
                 ?>
             </tbody>
         </table>
+    </div>
         <p>
             <label class="jumlahLabel">Jumlah Data: <?php echo $jumlah_data?></label>
         </p>
+        <div class="pagination-div">
         <nav>
             <ul class="pagination justify-content-center">
                 <li class="page-item">
@@ -87,8 +91,11 @@ include("Connection/config.php");
                     </li>
             </ul>
         </nav>
+        </div>
         <div class="row">
-            <a href="form-pembayaran-kapal.php"><input type="button" value="Tambah Pembayaran"></input></a>
+            <div class="buttonField">
+            <a href="form-pembayaran-kapal.php"><input type="button" class="buttonTambah" value="Tambah Pembayaran"></input></a>
+            </div>
         </div>
     </body>
 </html>

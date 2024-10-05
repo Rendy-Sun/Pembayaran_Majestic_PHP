@@ -254,7 +254,7 @@
                 </div>
                 <div class="row">
                     <a href="form-riwayat-pembayaran-kapal.php"><input type="button" class="riwayatButton" value="Riwayat"></input></a>
-                    <input type="submit" name="submitUpdateRiwayatPembayaran" value="Edit"/>
+                    <input type="submit" class="submitEdit" name="submitUpdateRiwayatPembayaran" value="Edit"/>
                 </div>
             </form>
         </div>

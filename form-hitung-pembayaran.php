@@ -29,7 +29,7 @@
                         <label>Dari Tanggal</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="date" name="dariTanggal" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo $dariTanggal;?>"/>
+                        <input type="date" class="dateDariTanggal" name="dariTanggal" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo $dariTanggal;?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Cek Tanggal</label>
@@ -120,13 +120,13 @@
                         <label>Total PNBP MASTER CABLE (MC)</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="mcTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo $totalHargaMC;?>"/>
+                        <input type="number" name="mcTransaksi" class="large" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo $totalHargaMC;?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total PNBP MASTER CABLE (MC)</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo $totalSaldoMc;?>"/>
+                        <input type="number" readonly placeholder="0" class="large" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo $totalSaldoMc;?>"/>
                     </div>
                 </div>
                 <div class="row">
