@@ -36,5 +36,12 @@ input[type=button]{
     margin-left: 45%;
     margin-top: 20px;
 }
+@media screen and (max-width: 600px) {
+    input[type=button]{
+        margin: 35%;
+        margin-top: 8%;
+        margin-bottom: 0;
+    }
+}
 
 
