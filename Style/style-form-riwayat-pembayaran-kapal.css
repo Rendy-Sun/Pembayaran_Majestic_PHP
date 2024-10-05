@@ -34,11 +34,17 @@ input[type=button].buttonTambah{
     border-radius: 4px;
     cursor: pointer;
     float: left;
-    margin-left: 40%;
+    margin-left: 45%;
+    margin-top: 5%;
     position: absolute;
 }
 th{
     text-align: center;
+}
+label{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
 }
 @media screen and (max-width: 600px) {
     .scroll{
@@ -58,5 +64,8 @@ th{
     }
     input[type=button].buttonTambah{
         margin-left:30%;
+    }
+    header{
+        scale: 0.8;
     }
 }

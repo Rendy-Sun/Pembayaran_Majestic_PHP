@@ -7,16 +7,15 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-penerimaan-saldo-pembayaran.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <?php
             include("navigationBar-3.html");
         ?>
-        
     </head>
     
     <body>
+    <div class="header">
     <header><h2>Riwayat Penerimaan Saldo</h2></header>
+    </div>        <div class="content">
         <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
@@ -30,7 +29,7 @@
                     <th>PNBP MASTER CABLE (MC)</th>
                     <th>PNBP RAMBU</th>
                     <th>Buku Kesehatan Karantina</th>
-                    <th class="catatanRow">Catatan</th>
+                    <th>Catatan</th>
                     <th colspan="2">Action</th>
                 </tr>
             </thead>
@@ -90,5 +89,7 @@
             <a href="form-tambah-penerimaan-saldo-pembayaran.php"><input type="button" class="buttonTambah" value="Tambah Penerimaan"></input></a>
             </div>
         </div>
+        </div>
+
     </body>
 </html>

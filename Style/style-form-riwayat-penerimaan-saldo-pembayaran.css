@@ -1,4 +1,4 @@
-header{
+.header{
     text-align: center;
     margin-top: 3%;
 }
@@ -26,6 +26,10 @@ header{
 .table tr:nth-child(even){
     background-color: #f2f2f2;
 }
+.buttonField{
+    margin-left: 38.5%;
+    margin-top: 1%;
+}
 input[type=button].buttonTambah{
     background-color: #04AA6D;
     color: white;
@@ -37,19 +41,43 @@ input[type=button].buttonTambah{
     margin-left: 45%;
     margin-top: 20px;
 }
+.content{
+    scale: 0.98;
+}
+.pagination-div{
+    margin-top: 5%;
+}
+th{
+    text-align: center;
+}
 @media screen and (max-width: 600px) {
     .scroll{
         overflow-y: scroll;
         height: auto;
-        scale: 0.9;
-        
+        scale: 0.9;     
     }
     .pagination-div{
-        scale: 0.6;
+        scale: 0.7;
     }
     .buttonField{
-        scale: 0.6;
-        margin-left: 17%;
+        scale: 0.7;
+        margin-left: 15.5%;
+    }
+    .content{
+        scale: 0.9;
+    }
+    .table{
+        margin-top: 0%;
+    }
+    th{
+        text-align: center;
+    }
+    .header{
+        scale: 0.8;
+        margin-bottom: -20%;
+    }
+    header{
+        margin-left: 5%;
     }
 }
 

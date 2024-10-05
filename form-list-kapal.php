@@ -15,6 +15,9 @@ include("Connection/config.php");
     </head>
 
     <body>
+        <div class="header">
+            <header><h2>Daftar Nama Kapal</h2></header>
+        </div>
         <div class="container">
         <div class="row">
             <table class="table" border="1">

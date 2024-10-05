@@ -14,6 +14,9 @@ include("Connection/config.php");
     </head>
 
     <body>
+    <div class="header">
+
+    </div>
     <header><h2>Riwayat Pembayaran Kapal</h2></header>
     <div class="scroll">
         <table id="riwayat" class="table" border="1">
