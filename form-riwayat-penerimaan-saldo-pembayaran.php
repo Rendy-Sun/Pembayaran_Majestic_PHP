@@ -6,9 +6,8 @@
         <title>Pembayaran Kapal Majestic</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-penerimaan-saldo-pembayaran.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <?php
-            include("navigationBar-3.html");
+            include("navigationBar-4.html");
         ?>
     </head>
     

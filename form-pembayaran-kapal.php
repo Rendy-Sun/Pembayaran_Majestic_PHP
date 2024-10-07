@@ -6,9 +6,8 @@
         <title>Pembayaran Majestic Ferry</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="Style/style-form-pembayaran-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <?php
-            include("navigationBar-3.html");
+            include("navigationBar-4.html");
         ?>
     </head>
     <body>
@@ -189,7 +188,15 @@
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <label>Catatan Pembayaran: </label>
+                        <label>Bukti Pembayaran (Optional) </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="bukti_pembayaran">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Catatan Pembayaran </label>
                     </div>
                     <div class="col-75">
                         <textarea name="catatan_pembayaran"></textarea>

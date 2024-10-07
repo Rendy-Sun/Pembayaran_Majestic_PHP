@@ -5,10 +5,9 @@
     <head>
         <title>Data Kapal</title>
         <link rel="stylesheet" href="Style/style-form-data-kapal.css"/>
-        <link rel="stylesheet"href="Style/style-navigationBar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <?php 
-            include("navigationBar-3.html")
+            include("navigationBar-4.html")
         ?>
     </head>
     <body>

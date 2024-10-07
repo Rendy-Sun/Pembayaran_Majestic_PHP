@@ -8,6 +8,8 @@
         while($row_data = mysqli_fetch_assoc($result)){
             echo '<option value="'.$row_data['masa_berlaku'].'" >'.$row_data['masa_berlaku'].'</option>';
         }
+
+
     }
     else{
 

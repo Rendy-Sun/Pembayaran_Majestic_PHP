@@ -15,6 +15,7 @@ header{
     background: #35A9DB;
     color: #fff;
     font-weight: normal;
+    vertical-align: middle;
 }
 .table, th, td{
     padding: 8px 20px;

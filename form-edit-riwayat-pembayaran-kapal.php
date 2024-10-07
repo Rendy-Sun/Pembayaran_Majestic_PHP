@@ -5,11 +5,10 @@
     <head>
         <title>Pembayaran Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-edit-riwayat-pembayaran-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-            include("navigationBar-3.html");
+            include("navigationBar-4.html");
         ?>
     </head>
     <body>
@@ -242,6 +241,14 @@
                     </div>
                     <div class="col-75">
                         <input type="date" name="tanggal_transaksi" required value="<?php include("Fetch_Data/edit-riwayat-pembayaran-kapal.php"); echo $tanggalTransaksi; ?>"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Bukti Pembayaran (Optional)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="bukti_pembayaran" value="<?php include("Fetch_Data/edit-riwayat-pembayaran-kapal.php"); echo $buktiPembayaran?>">
                     </div>
                 </div>
                 <div class="row">

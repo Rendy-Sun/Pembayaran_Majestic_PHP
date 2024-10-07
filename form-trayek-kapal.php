@@ -7,11 +7,10 @@
             Pembayaran Majestic Ferry
         </title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-trayek-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-            include("navigationBar-3.html");
+            include("navigationBar-4.html");
         ?>
     </head>
     <body>
@@ -54,7 +53,8 @@
                                 include("Action/cek-masa-berlaku-trayek-kapal.php");
                             ?>
                         </select>
-                        <input type="submit" name="submitCekNomorTrayek"value="Cek"/>
+                        <input type="text" id="rambu" name="rambu" hidden value="<?php include("Action/cek-masa-berlaku-rambu.php"); ?>">
+                        <input type="submit" name="submitCekNomorTrayek"value="Cek" onclick="if(document.getElementById('rambu').value=='Expired'){alert('Rambu Kapal Sudah Expired! Silahkan Perbaharui!');}"/>
                     </div>
                 </div>
                 <div class="row">
@@ -62,7 +62,7 @@
                         <label>Nomor Trayek Kapal </label>
                     </div>
                     <div class="col-75">
-                        <input type="text" value="<?php include("Action/cek-nomor-trayek-kapal.php");?>" disabled="disabled"/>
+                        <input type="text" id="trayek" value="<?php include("Action/cek-nomor-trayek-kapal.php");?>" disabled="disabled"/>
                     </div>
                 </div>
                 <div class="row">

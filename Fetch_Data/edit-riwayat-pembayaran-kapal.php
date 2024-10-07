@@ -7,5 +7,6 @@
         $tanggalTransaksi = $row_data['tanggal_transaksi'];
         $hargaTransaksi = $row_data['harga'];
         $catatanTransaksi = $row_data['catatan_transaksi'];
+        $buktiPembayaran = $row_data['bukti_pembayaran'];
     }
 ?>

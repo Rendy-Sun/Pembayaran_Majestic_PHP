@@ -5,11 +5,10 @@ include("Connection/config.php");
     <head>
         <title>Daftar Kapal Majestic</title>
         <link rel="stylesheet" type="text/css" href="Style/style-form-list-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-            include("navigationBar-3.html");
+            include("navigationBar-4.html");
         ?>
 
     </head>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Style/style-navigationBar-4.css"/>
+
+<nav class="navBar">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3 class="insideMenu">Menu</h3>
+        <a href="form-list-kapal.php">Daftar Kapal</a>
+        <a href="form-data-kapal.php">Data Kapal</a>
+        <a href="form-riwayat-pembayaran-kapal.php">Riwayat Pembayaran Kapal</a>
+        <a href="form-riwayat-penerimaan-saldo-pembayaran.php">Riwayat Penerimaan Saldo</a>
+        <a href="form-hitung-pembayaran.php">Hitung Pembayaran</a>
+        <a href="form-trayek-kapal.php">Trayek Kapal</a>
+        <a href="form-rambu-kapal.php">Rambu Kapal</a>
+      </div>
+      
+      <span class="spanMenu" onclick="openNav()">&#9776; Menu</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+</nav>
+</html> 

@@ -6,18 +6,15 @@ include("Connection/config.php");
         <title>Majestic Ferry</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-pembayaran-kapal.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-navigationBar.css"/>
-
         <?php
-            include("navigationBar-3.html");
+            include("navigationBar-4.html");
         ?>
     </head>
 
     <body>
     <div class="header">
-
-    </div>
     <header><h2>Riwayat Pembayaran Kapal</h2></header>
+    </div>
     <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
@@ -30,6 +27,7 @@ include("Connection/config.php");
                     <th>Trip Kapal</th>
                     <th>Harga</th>
                     <th>Tanggal Transaksi</th>
+                    <th>Bukti Pembayaran</th>
                     <th>Catatan Transaksi</th>
                     <th colspan="2">Action</th>
                 </tr>
