@@ -22,6 +22,7 @@ include("../Connection/config.php");
        
     }
     if(isset($_POST['Edit'])){
+        include("token.php");
         $nama_kapal = $_POST['kapalSelected'];
         $dari= $_POST['dateDari'];
         $sampai = $_POST['dateSampai'];

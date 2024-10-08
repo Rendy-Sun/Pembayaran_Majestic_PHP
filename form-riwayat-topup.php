@@ -5,7 +5,7 @@
     <head>
         <title>Pembayaran Kapal Majestic</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-penerimaan-saldo-pembayaran.css"/>
+        <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-topup.css"/>
         <?php
             include("navigationBar-4.php");
         ?>
@@ -13,27 +13,22 @@
     
     <body>
     <div class="header">
-    <header><h2>Riwayat Penerimaan Saldo</h2></header>
-    </div>        <div class="content">
+    <header><h2>Riwayat Top Up Saldo</h2></header>
+    </div>        
+    <div class="content">
         <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Tanggal Terima</th>
-                    <th>Jumlah Trip</th>
-                    <th>COP Karantina</th>
-                    <th>PHQC Karantina</th>
-                    <th>PNBP LABUH</th>
-                    <th>PNBP MASTER CABLE (MC)</th>
-                    <th>PNBP RAMBU</th>
-                    <th>Buku Kesehatan Karantina</th>
-                    <th>Catatan</th>
+                    <th>Saldo</th>
+                    <th>Bukti Top Up</th>
+                    <th>Tanggal Top Up</th>
                     <th colspan="2">Action</th>
                 </tr>
             </thead>
             <?php 
-                include("Fetch_Data/riwayat-penerimaan-saldo-pembayaran.php");
+                include("Fetch_Data/riwayat-topup.php");
             ?>
         </table>
         </div>
@@ -85,7 +80,7 @@
         </div>
         <div class="row">
             <div class="buttonField">
-            <a href="form-tambah-penerimaan-saldo-pembayaran.php"><input type="button" class="buttonTambah" value="Tambah Penerimaan"></input></a>
+            <a href="form-saldo-users.php"><input type="button" class="buttonTambah" value="Top Up Saldo"></input></a>
             </div>
         </div>
         </div>

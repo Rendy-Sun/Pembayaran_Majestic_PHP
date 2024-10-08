@@ -6,7 +6,7 @@
         <title>Rambu Kapal</title>
         <link rel="stylesheet" href="Style/style-form-rambu-kapal.css">
         <?php
-            include("navigationBar-4.html");
+            include("navigationBar-4.php");
         ?>
     </head>
     <body>

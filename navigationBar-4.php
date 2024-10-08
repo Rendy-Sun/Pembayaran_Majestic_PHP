@@ -11,12 +11,15 @@
         <a href="form-data-kapal.php">Data Kapal</a>
         <a href="form-riwayat-pembayaran-kapal.php">Riwayat Pembayaran Kapal</a>
         <a href="form-riwayat-penerimaan-saldo-pembayaran.php">Riwayat Penerimaan Saldo</a>
+        <a href="form-riwayat-topup.php">Riwayat Top Up</a>
         <a href="form-hitung-pembayaran.php">Hitung Pembayaran</a>
         <a href="form-trayek-kapal.php">Trayek Kapal</a>
         <a href="form-rambu-kapal.php">Rambu Kapal</a>
+        <a href="Action/action-logout-users.php">Log Out</a>
       </div>
       
       <span class="spanMenu" onclick="openNav()">&#9776; Menu</span>
+      <a href="form-saldo-users.php"><span class="spanLogOut"><?php include("Fetch_Data/fetch-data-saldo.php"); echo "Saldo: Rp ".$sisaSaldo;?></span></a>
       
       <script>
       function openNav() {

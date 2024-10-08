@@ -7,6 +7,12 @@ body {
   margin-left: 3%;
   color: white;
 }
+.spanLogOut{
+    float: right;
+    color: white;
+    margin-top: 10px;
+    margin-right: 20px;
+}
 .navBar{
   background-color: black;
   padding: 10px;

@@ -7,7 +7,7 @@ include("Connection/config.php");
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="Style/style-form-riwayat-pembayaran-kapal.css"/>
         <?php
-            include("navigationBar-4.html");
+            include("navigationBar-4.php");
         ?>
     </head>
 

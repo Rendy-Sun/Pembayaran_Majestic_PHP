@@ -19,16 +19,20 @@
 
     else{
         try{
-            $query = "INSERT INTO pembayaran_kapal (kapal_id, tujuan_pembayaran_id, trip_id, status_pembayaran_id, harga, tanggal_transaksi, bukti_pembayaran, catatan_transaksi) VALUES((SELECT id FROM daftar_kapal WHERE nama_kapal = '$nama_kapal'), (SELECT id FROM tujuan_pembayaran WHERE nama_tujuan = '$tujuan_pembayaran'), (SELECT id FROM trip_kapal WHERE waktu ='$trip'), (SELECT id FROM status_pembayaran WHERE status='$status_pembayaran'), '$harga', '$tanggal_transaksi', '$bukti_pembayaran', '$catatan_transaksi')";
+            session_start();
+            $username= $_SESSION['username'];
+            $password = $_SESSION['password'];
+            $query = "INSERT INTO pembayaran_kapal (kapal_id, tujuan_pembayaran_id, trip_id, status_pembayaran_id,user_id, harga, tanggal_transaksi, bukti_pembayaran, catatan_transaksi) VALUES((SELECT id FROM daftar_kapal WHERE nama_kapal = '$nama_kapal'), (SELECT id FROM tujuan_pembayaran WHERE nama_tujuan = '$tujuan_pembayaran'), (SELECT id FROM trip_kapal WHERE waktu ='$trip'), (SELECT id FROM status_pembayaran WHERE status='$status_pembayaran'),(SELECT id FROM users WHERE username='$username' AND password='$password'), '$harga', '$tanggal_transaksi', '$bukti_pembayaran', '$catatan_transaksi')";
             $result = $dbConnection->query($query);
+            
             if ($result) {
                 header('Location: ../form-pembayaran-kapal.php');
             }
             else {
                 die('akses dilarang!');
             }
-        }catch(mysqli_sql_exception){
-            echo '<script>alert("Error MySql Database"); location.href="../form-pembayaran-kapal.php";</script>';
+        }catch(mysqli_sql_exception $ex){
+            echo $ex.'<script>alert("Error MySql Database"); location.href="#";</script>';
         }
         
     }
