@@ -31,7 +31,7 @@
         echo "<td>". $row_data["waktu"] ."</td>";
         echo "<td>". $row_data["harga"] ."</td>";
         echo "<td>". $row_data["tanggal_transaksi"] ."</td>";
-        echo "<td><a href=". $row_data["bukti_pembayaran"] .">". $row_data["bukti_pembayaran"] ."</td>";
+        echo "<td><a href=". $row_data["bukti_pembayaran"] ." target='_blank'>". $row_data["bukti_pembayaran"] ."</td>";
         echo "<td>". $row_data["catatan_transaksi"] ."</td>";
         //echo "<td>". $row["tipe_kapal_id"] ."</td>";
         echo "<td>";

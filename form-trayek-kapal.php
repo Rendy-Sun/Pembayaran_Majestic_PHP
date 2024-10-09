@@ -75,6 +75,15 @@
                 </div>
                 <div class="row">
                     <div class="col-25">
+                        <label>Dokumen Rambu </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="url" value="<?php include("Action/cek-dokumen-rambu-kapal.php"); echo $dokumen_kapal; ?>" disabled="disabled"/>
+                        <a href="<?php echo $dokumen_kapal; ?>" target="<?php if($dokumen_kapal == "" || $dokumen_kapal == null){echo '_self';}else{echo '_blank';} ?>" ><input type="button" value="Open"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
                         <a href="form-daftar-trayek-kapal.php"><input type="button" class="buttonDaftar" value="Daftar Trayek"></a>
                     </div>
                     <div class="col-75">

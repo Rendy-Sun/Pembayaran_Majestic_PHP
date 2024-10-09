@@ -18,7 +18,7 @@
                     <label>Nama Kapal</label>
                 </div>
                 <div class="col-75">
-                    <select name="nama_kapal" required onchange="this.form.submit()">
+                    <select name="nama_kapal" required onchange="this.form.submit()" onchange="">
                         <option hidden>Pilih Kapal</option>
                         <?php     
                             $query = "SELECT * FROM daftar_kapal";
@@ -51,6 +51,15 @@
                 </div>
                 <div class="col-75">
                     <input type="date" name="dateSampai" required value="<?php include("Fetch_Data/fetch-data-rambu-kapal.php"); echo $berlaku_sampai; ?>">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Dokumen Rambu</label>
+                </div>
+                <div class="col-75">
+                    <input type="url" name="dokumen_rambu" value="<?php include("Fetch_Data/fetch-data-rambu-kapal.php"); echo $dokumen_rambu;?>">
+                    <a target="<?php if($dokumen_rambu == "" || $dokumen_rambu == null){echo '_self';}else{echo '_blank';} ?>" href="<?php echo $dokumen_rambu?>"><input id="open" type=button value="Open"></a>
                 </div>
             </div>
             <div class="row">

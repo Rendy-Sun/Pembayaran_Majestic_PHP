@@ -16,7 +16,7 @@
                         <label>Username</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" name="username">
+                        <input type="text" name="username" required value="" placeholder="Username">
                     </div>
                 </div>
                 <div class="row">
@@ -24,12 +24,12 @@
                         <label>Password</label>
                     </div>
                     <div class="col-75">
-                    <input type="password" name="password">
+                    <input type="password" name="password" required value="" placeholder="Password">
                     </div>
                 </div>
                 <div class="row">
                     <div class="submitField">
-                        <input type="submit" name="submit" class="submit" value="Login">
+                        <input type="submit" name="submit" class="submit" value="Login" >
                     </div>
                 </div>
             </form>
