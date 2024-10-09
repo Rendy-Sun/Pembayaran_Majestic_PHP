@@ -68,6 +68,11 @@ th{
     header{
         margin-left: 5%;
     }
+    .scroll{
+        overflow-y: scroll;
+        height: auto;
+        scale: 0.9;     
+    }
 }
 
 

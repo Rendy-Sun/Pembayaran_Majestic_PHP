@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-75">
                         <input type="url" value="<?php include("Action/cek-dokumen-rambu-kapal.php"); echo $dokumen_kapal; ?>" disabled="disabled"/>
-                        <a href="<?php echo $dokumen_kapal; ?>" target="<?php if($dokumen_kapal == "" || $dokumen_kapal == null){echo '_self';}else{echo '_blank';} ?>" ><input type="button" value="Open"></a>
+                        <a href="<?php echo $dokumen_kapal; ?>" target="<?php if($dokumen_kapal == "" || $dokumen_kapal == null){echo '_self';}else{echo '_blank';} ?>" ><input type="button" class="buttonOpen" value="Open"></a>
                     </div>
                 </div>
                 <div class="row">
