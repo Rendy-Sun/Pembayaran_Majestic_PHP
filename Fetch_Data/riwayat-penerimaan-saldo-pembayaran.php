@@ -21,17 +21,19 @@
     }
     while($row_data = mysqli_fetch_array($data_penerimaan))
     {
+        $date = date("d-M-Y", strtotime($row_data['tanggal_terima']));
+        
         echo "<tr>";
             echo "<td scope='row' style='display:none'>". $row_data["id"] ."</td>";
             echo "<td>".$noUrut++."</td>";
-            echo "<td>". $row_data["tanggal_terima"] ."</td>";
+            echo "<td style='width:10%;'>". $date ."</td>";
             echo "<td>". $row_data["total_trip"] ."</td>";
-            echo "<td>". $row_data["cop_karantina"] ."</td>";
-            echo "<td>". $row_data["phqc_karantina"] ."</td>";
-            echo "<td>". $row_data["pnbp_labuh"] ."</td>";
-            echo "<td>". $row_data["pnbp_mc"] ."</td>";
-            echo "<td>". $row_data["pnbp_rambu"] ."</td>";
-            echo "<td>". $row_data["buku_kesehatan_karantina"] ."</td>";
+            echo "<td style='width:10%;'>Rp ". number_format($row_data["cop_karantina"], 0, '', '.') ."</td>";
+            echo "<td style='width:10%;'>Rp ". number_format($row_data["phqc_karantina"], 0, '', '.') ."</td>";
+            echo "<td style='width:10%;'>Rp ". number_format($row_data["pnbp_labuh"], 0, '', '.') ."</td>";
+            echo "<td style='width:10%;'>Rp ". number_format($row_data["pnbp_mc"], 0, '','.') ."</td>";
+            echo "<td style='width:10%;'>Rp ". number_format($row_data["pnbp_rambu"], 0, '', '.') ."</td>";
+            echo "<td style='width:10%;'>Rp ". number_format($row_data["buku_kesehatan_karantina"], 0, '', '.') ."</td>";
             echo "<td>". $row_data["catatan"] ."</td>";
             //echo "<td>". $row["tipe_kapal_id"] ."</td>";
             echo "<td>";

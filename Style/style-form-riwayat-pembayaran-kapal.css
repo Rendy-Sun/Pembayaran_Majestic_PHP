@@ -6,7 +6,7 @@ header{
     font-family:sans-serif;
     color:#444;
     border-collapse: collapse;
-    width: 80%;
+    width: 90%;
     border: 1px solid #f2f5f7;
     margin: auto;
     margin-top: 3%;
@@ -39,13 +39,13 @@ input[type=button].buttonTambah{
     margin-top: 5%;
     position: absolute;
 }
-th{
-    text-align: center;
+.table td{
+    vertical-align: middle;
 }
 label{
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 @media screen and (max-width: 600px) {
     .scroll{
@@ -68,5 +68,9 @@ label{
     }
     header{
         scale: 0.8;
+    }
+    .table{
+        width: 400%;
+        margin-bottom: 5%;
     }
 }

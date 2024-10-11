@@ -5,8 +5,8 @@
         $berlakuDari = $_POST['dateBerlakuDari'];
         $berlakuSampai = $_POST['dateBerlakuSampai'];
         $nomorTrayek = $_POST['nomorTrayek'];
-        $masaDari = date("n/j/Y", strtotime($berlakuDari));
-        $masaSampai = date("n/j/Y", strtotime($berlakuSampai));
+        $masaDari = date("d-m-Y", strtotime($berlakuDari));
+        $masaSampai = date("d-m-Y", strtotime($berlakuSampai));
         $masaBerlaku = $masaDari." - ".$masaSampai;
     }
     $queryCheck = "SELECT * FROM pkka_kapal WHERE kapal_id =(SELECT id FROM daftar_kapal WHERE nama_kapal = '$namaKapal') AND masa_berlaku='$masaBerlaku'";

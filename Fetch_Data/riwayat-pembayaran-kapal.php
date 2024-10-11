@@ -22,15 +22,17 @@
     
     while($row_data = mysqli_fetch_array($data_pembayaran)){
         $noUrut++;
+        $date = date("d-M-Y", strtotime($row_data['tanggal_transaksi']));
+        $harga = number_format($row_data["harga"], 0,'','.');
         echo "<tr>";
         echo "<td scope='row' style='display:none'>". $row_data["id_pembayaran"] ."</td>";
         echo "<td>". $noUrut ."</td>";
         echo "<td>". $row_data["nama_kapal"] ."</td>";
-        echo "<td>". $row_data["nama_tujuan"] ."</td>";
+        echo "<td style='width:10%;'>". $row_data["nama_tujuan"] ."</td>";
         echo "<td>". $row_data["status"] ."</td>";
         echo "<td>". $row_data["waktu"] ."</td>";
-        echo "<td>". $row_data["harga"] ."</td>";
-        echo "<td>". $row_data["tanggal_transaksi"] ."</td>";
+        echo "<td style='width:10%;'>Rp ". $harga ."</td>";
+        echo "<td style='width:10%;'>". $date ."</td>";
         echo "<td><a href=". $row_data["bukti_pembayaran"] ." target='_blank'>". $row_data["bukti_pembayaran"] ."</td>";
         echo "<td>". $row_data["catatan_transaksi"] ."</td>";
         //echo "<td>". $row["tipe_kapal_id"] ."</td>";

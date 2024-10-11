@@ -19,7 +19,7 @@
       </div>
       
       <span class="spanMenu" onclick="openNav()">&#9776; Menu</span>
-      <a href="form-saldo-users.php"><span class="spanLogOut"><?php include("Fetch_Data/fetch-data-saldo.php"); echo "Saldo: Rp ".$sisaSaldo;?></span></a>
+      <a href="form-saldo-users.php"><span class="spanLogOut"><?php include("Fetch_Data/fetch-data-saldo.php"); echo "Saldo: Rp ".number_format($sisaSaldo, 0, '','.');?></span></a>
       
       <script>
       function openNav() {
