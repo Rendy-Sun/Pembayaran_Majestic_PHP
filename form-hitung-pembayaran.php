@@ -59,8 +59,7 @@
                         <input type="date" name="sampaiTanggal" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo $sampaiTanggal;?>"/>
                     </div>
                     <div class="subcolumn-3">
-                        <input type="submit" name="submitCekTransaksi" id="submitCekTransaksi" class="submitCekTransaksi" value="Cek" onclick="
-                        "/>
+                        <input type="submit" name="submitCekTransaksi" id="submitCekTransaksi" class="submitCekTransaksi" value="Cek"/>
                     </div>
                     <div class="subcolumn-4">
                     </div>
@@ -78,13 +77,13 @@
                         <label>Total COP Karantina</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" placeholder="0" name="copTransaksi" readonly value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaCOP, 0, '', '.');?>"/>
+                        <input type="text" placeholder="0" name="copTransaksi" readonly value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaCOP, 0, '', '.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total COP Karantina</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" placeholder="0" name="copSaldo" readonly value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoCOP, 0, '','.');?>"/>
+                        <input type="text" placeholder="0" name="copSaldo" readonly value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoCOP, 0, '','.');?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -92,13 +91,13 @@
                         <label>Total PHQC Karantina</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" placeholder="0" name="phqcTransaksi" readonly value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaPHQC, 0, '', '.');?>"/>
+                        <input type="text" placeholder="0" name="phqcTransaksi" readonly value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaPHQC, 0, '', '.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total PHQC Karantina</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoPHQC, 0, '', '.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoPHQC, 0, '', '.');?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -106,13 +105,13 @@
                         <label>Total PNBP LABUH</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="labuhTransaksi" placeholder="0" readonly value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaLABUH, 0, '', '.');?>"/>
+                        <input type="text" name="labuhTransaksi" placeholder="0" readonly value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaLABUH, 0, '', '.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total PNBP LABUH</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoLabuh, 0, '', '.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoLabuh, 0, '', '.');?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -120,13 +119,13 @@
                         <label>Total PNBP MASTER CABLE (MC)</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="mcTransaksi" class="large" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaMC, 0, '', '.');?>"/>
+                        <input type="text" name="mcTransaksi" class="large" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaMC, 0, '', '.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total PNBP MASTER CABLE (MC)</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" class="large" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoMc, 0, '', '.');?>"/>
+                        <input type="text" readonly placeholder="0" class="large" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoMc, 0, '', '.');?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -134,13 +133,13 @@
                         <label>Total PNBP RAMBU</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="rambuTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaRAMBU,0,'','.');?>"/>
+                        <input type="text" name="rambuTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaRAMBU,0,'','.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total PNBP RAMBU</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoRambu,0,'','.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoRambu,0,'','.');?>"/>
                     </div>
                 </div>
 
@@ -149,13 +148,13 @@
                         <label>Total Buku Kesehatan Karantina</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="bukuTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaBuku,0,'','.');?>"/>
+                        <input type="text" name="bukuTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalHargaBuku,0,'','.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total Buku Kesehatan Karantina</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoBuku, 0, '', '.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoBuku, 0, '', '.');?>"/>
                     </div>
                 </div>
 
@@ -164,13 +163,13 @@
                         <label>Total Saldo</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="totalTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalSaldoTransaksi,0,'','.');?>"/>
+                        <input type="text" name="totalTransaksi" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalSaldoTransaksi,0,'','.');?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total Saldo</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoTerima, 0,'','.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($totalSaldoTerima, 0,'','.');?>"/>
                     </div>
                 </div>
 
@@ -179,13 +178,13 @@
                         <label>Total Trip Kapal</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalTrip,0,'','.')?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-transaksi-hitung-pembayaran.php"); echo number_format($totalTrip,0,'','.')?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total Trip Kapal</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($jumlahTripKapal, 0, '', '.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-detail-saldo-hitung-pembayaran.php"); echo number_format($jumlahTripKapal, 0, '', '.');?>"/>
                     </div>
                 </div>
                 <div class="container">
@@ -195,13 +194,13 @@
                         <label>COP Karantina</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" name="sisaSaldoCOP" id="sisaSaldoCOP" placeholder="0" readonly value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoCOP,0,'','.') ?>"/>
+                        <input type="text" name="sisaSaldoCOP" id="sisaSaldoCOP" placeholder="0" readonly value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoCOP,0,'','.') ?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>PHQC Karantina</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoPHQC, 0, '', '.'); ?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoPHQC, 0, '', '.'); ?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -209,13 +208,13 @@
                         <label>PNBP LABUH</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoLABUH,0, '','.'); ?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoLABUH,0, '','.'); ?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>PNBP MASTER CABLE (MC)</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoMC, 0, '','.');?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoMC, 0, '','.');?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -223,13 +222,13 @@
                         <label>PNBP RAMBU</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoRambu, 0, '', '.'); ?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoRambu, 0, '', '.'); ?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Buku Kesehatan Karantina</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoBuku, 0, '','.'); ?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaSaldoBuku, 0, '','.'); ?>"/>
                     </div>
                 </div>
                 <div class="row">
@@ -237,13 +236,13 @@
                         <label>Total Sisa Saldo</label>
                     </div>
                     <div class="subcolumn-2">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaTotalSaldoKapal, 0, '', '.'); ?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaTotalSaldoKapal, 0, '', '.'); ?>"/>
                     </div>
                     <div class="subcolumn-3">
                         <label>Total Sisa Trip Kapal</label>
                     </div>
                     <div class="subcolumn-4">
-                        <input type="number" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaTripKapal, 0, '', '.'); ?>"/>
+                        <input type="text" readonly placeholder="0" value="<?php include("Fetch_Data/fetch-data-sisa-saldo.php"); echo number_format($sisaTripKapal, 0, '', '.'); ?>"/>
                     </div>
                 </div>
             </div>

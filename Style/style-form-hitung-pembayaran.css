@@ -2,14 +2,7 @@ header{
     margin: auto;
     margin-left: 40%;
 }
-input[type=text], select{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
+
 input[type=date], select{
     width: 80%;
     padding: 12px;
@@ -18,7 +11,7 @@ input[type=date], select{
     box-sizing: border-box;
     resize: vertical;
 }
-input[type=number]{
+input[type=text]{
     width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
