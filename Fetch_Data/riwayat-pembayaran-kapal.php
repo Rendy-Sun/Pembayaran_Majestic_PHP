@@ -11,7 +11,7 @@
     $jumlah_data = mysqli_num_rows($data);
     $total_halaman = ceil($jumlah_data/$batas);
 
-    $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id ORDER BY tanggal_transaksi DESC, waktu DESC LIMIT $halaman_awal, $batas";
+    $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi, sisa_saldo FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id ORDER BY tanggal_transaksi DESC, waktu DESC, sisa_saldo ASC LIMIT $halaman_awal, $batas";
     $data_pembayaran = mysqli_query($dbConnection, $query);
     $nomor = $halaman_awal+1;
 
@@ -35,6 +35,7 @@
         echo "<td style='width:10%;'>". $date ."</td>";
         echo "<td><a href=". $row_data["bukti_pembayaran"] ." target='_blank'>". $row_data["bukti_pembayaran"] ."</td>";
         echo "<td>". $row_data["catatan_transaksi"] ."</td>";
+        echo "<td style='width:10%;'>Rp ". number_format($row_data["sisa_saldo"],0,'','.') ."</td>";
         //echo "<td>". $row["tipe_kapal_id"] ."</td>";
         echo "<td>";
         echo "<a href = 'form-edit-riwayat-pembayaran-kapal.php?id=".$row_data['id_pembayaran']."'>Edit</a></td>";

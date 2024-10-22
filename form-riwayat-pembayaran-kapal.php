@@ -29,6 +29,7 @@ include("Connection/config.php");
                     <th>Tanggal Transaksi</th>
                     <th>Bukti Pembayaran</th>
                     <th>Catatan Transaksi</th>
+                    <th>Sisa Saldo</th>
                     <th colspan="2">Action</th>
                 </tr>
             </thead>

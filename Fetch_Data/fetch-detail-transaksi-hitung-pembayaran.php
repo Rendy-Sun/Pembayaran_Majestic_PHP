@@ -1,12 +1,12 @@
 <?php 
-    $totalHargaCOP = null;
-    $totalHargaPHQC = null;
-    $totalHargaLABUH = null;
-    $totalHargaMC = null;
-    $totalHargaRAMBU = null;
-    $totalHargaBuku = null;
-    $totalTrip = null;
-    $totalSaldoTransaksi = null;
+    $totalHargaCOP = "0";
+    $totalHargaPHQC = "0";
+    $totalHargaLABUH = "0";
+    $totalHargaMC = 0;
+    $totalHargaRAMBU = 0;
+    $totalHargaBuku = 0;
+    $totalTrip = 0;
+    $totalSaldoTransaksi = 0;
     if(isset($_POST['submitCekTransaksi'])){
         $dariTanggal = $_POST['dariTanggal'];
         $sampaiTanggal = $_POST['sampaiTanggal'];

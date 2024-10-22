@@ -8,5 +8,6 @@
         $hargaTransaksi = $row_data['harga'];
         $catatanTransaksi = $row_data['catatan_transaksi'];
         $buktiPembayaran = $row_data['bukti_pembayaran'];
+        $sisa_saldo = $row_data['sisa_saldo'];
     }
 ?>

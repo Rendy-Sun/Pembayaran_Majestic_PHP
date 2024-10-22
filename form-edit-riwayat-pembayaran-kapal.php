@@ -260,6 +260,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-25">
+                        <label>Sisa Saldo </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="sisa_saldo" value="<?php include("Fetch_Data/edit-riwayat-pembayaran-kapal.php"); echo $sisa_saldo?>">
+                    </div>
+                </div>
+                <div class="row">
                     <a href="form-riwayat-pembayaran-kapal.php"><input type="button" class="riwayatButton" value="Riwayat"></input></a>
                     <input type="submit" class="submitEdit" name="submitUpdateRiwayatPembayaran" value="Edit"/>
                 </div>

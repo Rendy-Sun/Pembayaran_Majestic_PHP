@@ -22,6 +22,7 @@
         $data3 = mysqli_fetch_array($result3);
         $topup = $data3['topup'];
         $sisaSaldo = ($saldo+$topup) - $data2['mutasi'];
+        $_SESSION['saldo_awal'] = $sisaSaldo;
     }
     
 ?>

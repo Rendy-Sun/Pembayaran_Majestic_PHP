@@ -24,6 +24,7 @@
                     <th>Saldo</th>
                     <th>Bukti Top Up</th>
                     <th>Tanggal Top Up</th>
+                    <th>Saldo</th>
                     <th colspan="2">Action</th>
                 </tr>
             </thead>

@@ -32,7 +32,8 @@
         echo "<td>". $noUrut ."</td>";
         echo "<td>". $row_data["saldo"] ."</td>";
         echo "<td><a href=". $row_data["bukti_topup"] ." target='_blank'>". $row_data["bukti_topup"] ."</td>";
-        echo "<td><a></a>". $row_data["tanggal_topup"] ."</td>";
+        echo "<td>". $row_data["tanggal_topup"] ."</td>";
+        echo "<td>Rp ". number_format($row_data["sisa_saldo"],0,'','.') ."</td>";
         echo "<td>";
         echo "<a href = 'form-edit-saldo-users.php?id=".$row_data['id']."'>Edit</a></td>";
         echo "<td>";

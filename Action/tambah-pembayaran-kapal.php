@@ -22,11 +22,33 @@
             session_start();
             $username= $_SESSION['username'];
             $password = $_SESSION['password'];
+
             $query = "INSERT INTO pembayaran_kapal (kapal_id, tujuan_pembayaran_id, trip_id, status_pembayaran_id,user_id, harga, tanggal_transaksi, bukti_pembayaran, catatan_transaksi) VALUES((SELECT id FROM daftar_kapal WHERE nama_kapal = '$nama_kapal'), (SELECT id FROM tujuan_pembayaran WHERE nama_tujuan = '$tujuan_pembayaran'), (SELECT id FROM trip_kapal WHERE waktu ='$trip'), (SELECT id FROM status_pembayaran WHERE status='$status_pembayaran'),(SELECT id FROM users WHERE username='$username' AND password='$password'), '$harga', '$tanggal_transaksi', '$bukti_pembayaran', '$catatan_transaksi')";
             $result = $dbConnection->query($query);
             
             if ($result) {
-                header('Location: ../form-pembayaran-kapal.php');
+                $query2= "SELECT saldo FROM users WHERE username = '$username' AND password='$password'";
+                $result2 = $dbConnection->query($query2);
+                $row2 = mysqli_fetch_array($result2);
+                
+                $query3= "SELECT SUM(harga) AS harga FROM pembayaran_kapal WHERE user_id = (SELECT id FROM users WHERE username='$username' AND password='$password')";
+                $result3 = $dbConnection->query($query3);
+                $row3 = mysqli_fetch_array($result3);
+
+                $query4 = "SELECT SUM(saldo) AS topup FROM riwayat_topup WHERE user_id = (SELECT id FROM users WHERE username='$username' AND password='$password')";
+                $result4 = $dbConnection->query($query4);
+                $row4 = mysqli_fetch_array($result4);
+
+                $sisa_saldo = ($row2['saldo'] + $row4['topup']) - $row3['harga'];
+
+                $query5 = "UPDATE pembayaran_kapal SET sisa_saldo='$sisa_saldo' WHERE id = (SELECT MAX(id) FROM pembayaran_kapal WHERE user_id=(SELECT id FROM users WHERE username='$username' AND password='$password'))";
+                $result5 = $dbConnection->query($query5);
+                if($result5){
+                    header('Location: ../form-pembayaran-kapal.php');
+                }
+                else{
+                    die("ERROR saldo Awal!");
+                }
             }
             else {
                 die('akses dilarang!');
