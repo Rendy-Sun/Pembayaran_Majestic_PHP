@@ -44,7 +44,7 @@ include("Connection/config.php");
                 ?>
             </select>
             <input type="submit" name="submit" value="Cek">
-        <a href="?halaman=1"><input type=button value="Semua"></a>
+        <a href="?halaman=1&dateDari=&dateSampai=&trip=all&submit=Cek#"><input type=button value="Semua"></a>
         </div>
     </div>
     <div class="scroll">
