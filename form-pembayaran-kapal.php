@@ -183,7 +183,7 @@
                         <label>Tanggal Pembayaran </label>
                     </div>
                     <div class="col-75">
-                        <input type="date" name="tanggal_transaksi" required/>  
+                        <input type="date" name="tanggal_transaksi" required value="<?php $dt=new DateTime(); echo $dt->format('Y-m-d'); ?>"/>  
                     </div>
                 </div>
                 <div class="row">
