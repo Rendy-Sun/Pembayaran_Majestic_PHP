@@ -9,12 +9,13 @@
         <h3 class="insideMenu">Menu</h3>
         <a href="form-list-kapal.php">Daftar Kapal</a>
         <a href="form-data-kapal.php">Data Kapal</a>
-        <a href="form-riwayat-pembayaran-kapal.php">Riwayat Pembayaran Kapal</a>
+        <a href="form-riwayat-pembayaran-kapal.php?halaman=1&dateDari=&dateSampai=&trip=all&submit=Cek#">Riwayat Pembayaran Kapal</a>
         <a href="form-riwayat-penerimaan-saldo-pembayaran.php">Riwayat Penerimaan Saldo</a>
         <a href="form-riwayat-topup.php">Riwayat Top Up</a>
         <a href="form-hitung-pembayaran.php">Hitung Pembayaran</a>
         <a href="form-trayek-kapal.php">Trayek Kapal</a>
         <a href="form-rambu-kapal.php">Rambu Kapal</a>
+        <a href="../Manajemen_Keuangan/mutasi/form-daftar-mutasi-rekening.php">Manajemen_Keuangan</a>
         <a href="Action/action-logout-users.php">Log Out</a>
       </div>
       

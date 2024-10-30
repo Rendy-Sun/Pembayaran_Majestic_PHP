@@ -226,7 +226,7 @@
                         <label>Total Trip</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="totaltrip" id="totaltripKapal" placeholder="0" readonly="readonly" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $trip; ?>"/>
+                        <input type="number" name="totaltrip" id="totaltripKapal" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $trip; ?>"/>
                     </div>
                 </div>
                 

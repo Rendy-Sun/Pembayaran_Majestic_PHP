@@ -14,9 +14,50 @@ include("Connection/config.php");
     <body>
     <form action="#">
     <div class="header">
-        <header><h2>Riwayat Pembayaran Kapal</h2></header>
+    <header><h2>Riwayat Pembayaran Kapal</h2></header>
     </div>
-        
+    <div class="row">
+        <div class="col-1">
+            <div class="sub-col-1">
+                <label>Dari Tanggal</label>
+            </div>
+            <div class="sub-col-2">
+                <input type="date" name="dateDari">
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sub-col-3">
+                <label>Sampai Tanggal</label>
+            </div>
+            <div class="sub-col-4">
+                <input type="date" name="dateSampai" class="sampaiLabel">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="sub-col-5">
+                <label class="tripLabel">Trip</label>
+            </div>
+            <div class="sub-col-6">
+                <select name="trip" class="trip">
+                    <option value="all">Semua Trip</option>
+                    <?php
+                        $query = "SELECT * FROM trip_kapal";
+                        $result = $dbConnection->query($query);
+                        while($row_data = mysqli_fetch_array($result)){
+                            echo '<option value="'.$row_data['waktu'].'">'.$row_data['waktu'].'</option>';
+                            if($_POST['trip'] == $row_data['waktu'])
+                            {
+                                echo '<option hidden value="'.$row_data['waktu'].'" selected >'.$row_data['waktu'].'</option>';
+                            }
+                        } 
+                    ?>
+                </select>
+                <input type="submit" name="submit" value="Cek">
+                <a href="?halaman=1&dateDari=&dateSampai=&trip=all&submit=Cek#" class="btnsemua"><input type=button value="Semua"></a>
+            </div>
+        </div>
+        </div>
+    </div>
     <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
@@ -159,7 +200,7 @@ include("Connection/config.php");
 
                         }else{
                             ?>
-                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $x; ?></a></li>
+                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo $trip?>&submit=Cek#"><?php echo $x; ?></a></li>
                             <?php
                         }
 
