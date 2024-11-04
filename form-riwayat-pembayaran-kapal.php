@@ -16,7 +16,38 @@ include("Connection/config.php");
     <div class="header">
         <header><h2>Riwayat Pembayaran Kapal</h2></header>
     </div>
-        
+    <div class="row">
+        <div class="subcolumn-1">
+            <label>Dari Tanggal</label>
+        </div>
+        <div class="subcolumn-2">
+            <input type="date" name="dateDari">
+        </div>
+        <div class="subcolumn-3">
+            <label>Sampai Tanggal</label>
+        </div>
+        <div class="subcolumn-4">
+            <input type="date" name="dateSampai">
+        </div>
+    </div>  
+    <div class="row">
+        <div class="subcolumn-1">
+            <label>Trip Kapal</label>
+        </div>
+        <div class="subcolumn-2">
+            <select name="trip">
+                <option value="all">Semua Trip</option>
+                <?php
+                    include("Fetch_Data/trip-option.php");
+                ?>
+            </select>
+        </div>
+        <div class="subcolumn-3">
+            <input type="submit" value="Cek">
+        </div>
+        <div class="subcolumn-4">
+        </div>
+    </div>
     <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
@@ -62,7 +93,7 @@ include("Connection/config.php");
                             $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi, sisa_saldo FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id WHERE tanggal_transaksi BETWEEN '$dateDari' AND '$dateSampai' ORDER BY tanggal_transaksi DESC, waktu DESC, sisa_saldo ASC LIMIT $halaman_awal, $batas";
                             $data_pembayaran = mysqli_query($dbConnection, $query);
                             $nomor = $halaman_awal+1;
-                        }else if($trip != "all"){
+                        }else if($trip != "all" && $dateSampai != null && $dateDari !=null){
                             $query = "SELECT * FROM pembayaran_kapal INNER JOIN trip_kapal ON trip_kapal.id = pembayaran_kapal.trip_id WHERE trip_kapal.waktu='$trip' AND tanggal_transaksi BETWEEN '$dateDari' AND '$dateSampai'";
                             $data = mysqli_query($dbConnection, $query);
                             $jumlah_data = mysqli_num_rows($data);
@@ -78,6 +109,15 @@ include("Connection/config.php");
                             $total_halaman = ceil($jumlah_data/$batas);
 
                             $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi, sisa_saldo FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id ORDER BY tanggal_transaksi DESC, waktu DESC, sisa_saldo ASC LIMIT $halaman_awal, $batas";
+                            $data_pembayaran = mysqli_query($dbConnection, $query);
+                            $nomor = $halaman_awal+1;
+                        }else if($trip != "all" && $dateDari == null && $dateSampai == null){
+                            $query = "SELECT * FROM pembayaran_kapal WHERE trip_id=(SELECT id FROM trip_kapal WHERE waktu = '$trip')";
+                            $data = mysqli_query($dbConnection, $query);
+                            $jumlah_data = mysqli_num_rows($data);
+                            $total_halaman = ceil($jumlah_data/$batas);
+
+                            $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi, sisa_saldo FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id WHERE trip_kapal.waktu='$trip' ORDER BY tanggal_transaksi DESC, waktu DESC, sisa_saldo ASC LIMIT $halaman_awal, $batas";
                             $data_pembayaran = mysqli_query($dbConnection, $query);
                             $nomor = $halaman_awal+1;
                         }               
@@ -134,6 +174,9 @@ include("Connection/config.php");
             <ul class="pagination justify-content-center">
                 <li class="page-item">
                     <a class="page-link"<?php 
+                    if($trip == null){
+                        $trip="all";
+                    }
                     $startpagination = $halaman;
                     $limitpagination = 9 + $halaman;                      
                     if($halaman > 1){
