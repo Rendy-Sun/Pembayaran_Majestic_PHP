@@ -15,7 +15,7 @@
         <a href="form-hitung-pembayaran.php">Hitung Pembayaran</a>
         <a href="form-trayek-kapal.php">Trayek Kapal</a>
         <a href="form-rambu-kapal.php">Rambu Kapal</a>
-        <a href="form-daftar-kru-kapal.php">Daftar Kru Kapal</a>
+        <a href="form-daftar-kru-kapal.php?halaman=1&pencarian=">Daftar Kru Kapal</a>
         <a href="../Manajemen_Keuangan/mutasi/form-daftar-mutasi-rekening.php">Manajemen_Keuangan</a>
         <a href="Action/action-logout-users.php">Log Out</a>
       </div>

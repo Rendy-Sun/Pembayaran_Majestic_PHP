@@ -6,7 +6,7 @@
     font-family:sans-serif;
     color:#444;
     border-collapse: collapse;
-    width: 95%;
+    width: 150%;
     border: 1px solid #f2f5f7;
     margin: auto;
     margin-top: 3%;
@@ -50,6 +50,12 @@ input[type=button].buttonTambah{
 }
 .table td{
     vertical-align: middle;
+}
+.scroll{
+    overflow-x: scroll;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 @media screen and (max-width: 600px) {
     .scroll{

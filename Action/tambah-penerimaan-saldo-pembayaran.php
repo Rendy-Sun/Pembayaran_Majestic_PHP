@@ -11,6 +11,7 @@
         $totalTripKapal = $_POST['totaltrip'];
         $tanggalTerimaSaldo = $_POST['tanggalTerima'];
         $catatanTerima = $_POST['catatan'];
+        $rincian = $_POST['rincian'];
     }
     $queryCheck = "SELECT * FROM detail_saldo WHERE tanggal_terima = '$tanggalTerimaSaldo'";
     $resultCheck = $dbConnection->query($queryCheck);
@@ -19,7 +20,7 @@
     }
     else{
         try{
-            $query = "INSERT INTO detail_saldo (cop_karantina, phqc_karantina, pnbp_labuh, pnbp_mc, pnbp_rambu, buku_kesehatan_karantina, total_trip, tanggal_terima, catatan) VALUES ('$copKarantina', '$phqcKarantina', '$pnbpLabuh', '$pnbpMc', '$pnbpRambu', '$bukuKarantina', '$totalTripKapal', '$tanggalTerimaSaldo', '$catatanTerima')";
+            $query = "INSERT INTO detail_saldo (cop_karantina, phqc_karantina, pnbp_labuh, pnbp_mc, pnbp_rambu, buku_kesehatan_karantina, total_trip, tanggal_terima, foto_rincian, catatan) VALUES ('$copKarantina', '$phqcKarantina', '$pnbpLabuh', '$pnbpMc', '$pnbpRambu', '$bukuKarantina', '$totalTripKapal', '$tanggalTerimaSaldo', '$rincian', '$catatanTerima')";
             $result = $dbConnection->query($query);
             if($result){
                 header('Location: ../form-tambah-penerimaan-saldo-pembayaran.php');

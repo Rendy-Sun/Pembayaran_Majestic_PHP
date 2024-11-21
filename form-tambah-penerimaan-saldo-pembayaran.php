@@ -226,6 +226,15 @@
                         <input type="number" name="totaltrip" id="totaltripKapal" placeholder="0" readonly="readonly"/>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label>Foto Rincian</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="rincian" placeholder="https://"/>
+                    </div>
+                </div>
                 
                 <div class="row">
                     <div class="col-25">

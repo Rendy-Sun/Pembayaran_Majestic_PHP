@@ -229,6 +229,15 @@
                         <input type="number" name="totaltrip" id="totaltripKapal" placeholder="0" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $trip; ?>"/>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label>Foto Rincian</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="rincian" id="totaltripKapal" placeholder="https://" value="<?php include("Fetch_Data/fetch-data-edit-riwayat-penerimaan-saldo-pembayaran.php"); echo $rincian; ?>"/>
+                    </div>
+                </div>
                 
                 <div class="row">
                     <div class="col-25">

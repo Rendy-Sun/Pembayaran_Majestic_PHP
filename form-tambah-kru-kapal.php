@@ -71,14 +71,14 @@
                         <label>Jabatan </label>
                     </div>
                     <div class="col-75">
-                        <select name="jabatan">
-                            <option hidden value ="">Pilih Jabatan</option>
+                        <select name="jabatan_kapal">
+                            <option hidden value="">Pilih Jabatan</option>
                             <?php
                                 $query = "SELECT * FROM jabatan_kru";
                                 $result = $dbConnection->query($query);
                                 while($data = mysqli_fetch_array($result)){
                                     $jabatan = $data['nama_jabatan'];
-                                    echo '<option value='.$jabatan.'>'.$jabatan.'</option>';
+                                    echo '<option value="'.$jabatan.'">'.$jabatan.'</option>';
                                 }
                             ?>
                         </select>

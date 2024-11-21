@@ -46,6 +46,16 @@ include("Connection/config.php");
             <input type="submit" value="Cek">
         </div>
         <div class="subcolumn-4">
+            <select>
+                <option hidden>Select Vessel</option>
+                <?php
+                    $query="SELECT nama_kapal FROM daftar_kapal";
+                    $result = $dbConnection->query($query);
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<option value=".$row["nama_kapal"].">".$row["nama_kapal"]."</option>";
+                    }
+                ?>
+            </select>
         </div>
     </div>
     <div class="scroll">
@@ -120,7 +130,17 @@ include("Connection/config.php");
                             $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi, sisa_saldo FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id WHERE trip_kapal.waktu='$trip' ORDER BY tanggal_transaksi DESC, waktu DESC, sisa_saldo ASC LIMIT $halaman_awal, $batas";
                             $data_pembayaran = mysqli_query($dbConnection, $query);
                             $nomor = $halaman_awal+1;
-                        }               
+                        }else if($dateDari ==null || $dateSampai == null){
+                            echo '<script>alert("Please Select Requirement Properly!")</script>';
+                            $query = "SELECT * FROM pembayaran_kapal";
+                            $data = mysqli_query($dbConnection, $query);
+                            $jumlah_data = mysqli_num_rows($data);
+                            $total_halaman = ceil($jumlah_data/$batas);
+
+                            $query = "SELECT pembayaran_kapal.id AS id_pembayaran, nama_kapal, nama_tujuan, status, waktu, harga, tanggal_transaksi, bukti_pembayaran,catatan_transaksi, sisa_saldo FROM pembayaran_kapal INNER JOIN daftar_kapal ON daftar_kapal.id = pembayaran_kapal.kapal_id INNER JOIN tujuan_pembayaran ON pembayaran_kapal.tujuan_pembayaran_id = tujuan_pembayaran.id INNER JOIN status_pembayaran ON pembayaran_kapal.status_pembayaran_id = status_pembayaran.id INNER JOIN trip_kapal ON pembayaran_kapal.trip_id = trip_kapal.id ORDER BY tanggal_transaksi DESC, waktu DESC, sisa_saldo ASC LIMIT $halaman_awal, $batas";
+                            $data_pembayaran = mysqli_query($dbConnection, $query);
+                            $nomor = $halaman_awal+1;
+                        }          
                     }else{
                         $query = "SELECT * FROM pembayaran_kapal";
                         $data = mysqli_query($dbConnection, $query);
@@ -196,14 +216,39 @@ include("Connection/config.php");
                     if(isset($_POST['next'])){
                         $startpagination +=1;
                     }              
-                    for($x=$startpagination;$x<=$limitpagination;$x++){
+                    for($x=$startpagination;$x<=$halaman;$x++){
                         if($x > ($jumlah_data/$batas))
                         {
+                            $before = $x-1;
+                            $after = $x+1;
+                            if($before == 0){
 
-                        }else{
+                            }else{
+                                ?>
+                                <li class="page-item"><a class="page-link" href="?halaman=<?php echo $before?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $before; ?></a></li><?php
+                            }
                             ?>
-                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $x; ?></a></li>
+                            <li class="page-item"><a style="color:black;" class="page-link" href="?halaman=<?php echo $x?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $x; ?></a></li>
                             <?php
+                        }else{
+                            $before = $x-1;
+                            $after = $x+1;
+                            if($before <= 0){
+
+                            }else{
+                                ?>
+                                <li class="page-item"><a class="page-link" href="?halaman=<?php echo $before?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $before; ?></a></li><?php
+                            }
+                            ?>
+                            <li class="page-item"><a style="color: black;" class="page-link" href="?halaman=<?php echo $x?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $x; ?></a></li>
+                            <?php
+                            if($after > $jumlah_data){
+
+                            }else{
+                                ?>
+                                <li class="page-item"><a class="page-link" href="?halaman=<?php echo $after?>&dateDari=<?php echo $dateDari?>&dateSampai=<?php echo $dateSampai?>&trip=<?php echo "all"?>&submit=Cek#"><?php echo $after; ?></a></li><?php
+
+                            }
                         }
 
                     }

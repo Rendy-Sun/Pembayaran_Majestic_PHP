@@ -30,7 +30,7 @@ input[type=date]{
     margin-left: 20%;
 
 }
-input[type=number]{
+input[type=number], input[type=text]{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;

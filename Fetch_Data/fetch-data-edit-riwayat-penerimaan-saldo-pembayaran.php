@@ -10,6 +10,7 @@
     $rambu = $row_data['pnbp_rambu'];
     $buku = $row_data['buku_kesehatan_karantina'];
     $trip =$row_data['total_trip'];
+    $rincian = $row_data['foto_rincian'];
     $catatan = $row_data['catatan'];
     $totalSaldo = $cop + $phqc + $labuh + $mc + $rambu + $buku;
 ?>

@@ -31,47 +31,26 @@
                     <div class="col-25">
                         <label>Tujuan Pembayaran </label>           
                     </div>
-                    <div class="col-75">
-                        <select id="tujuan_pembayaran" name="tujuan_pembayaran" required onchange="
-                        var checkTujuan =document.getElementById('tujuan_pembayaran').value;
-                        var checkKapal =document.getElementById('nama_kapal').value;
-                        var lol = document.getElementById('harga').value;
-                            if(checkKapal == 'WM 3' || checkKapal=='WM 5' || checkKapal == 'WM 6' || checkKapal == 'WM 7' || checkKapal == 'WM 8' || checkKapal == 'WM 9'){
-                                if(checkTujuan == 'COP Karantina'){
-                                    document.getElementById('harga').value = '70000';
-                                    document.getElementById('harga').readOnly=true;
-                                }else if(checkTujuan == 'PHQC Karantina'){
-                                    document.getElementById('harga').value = '30000';
-                                    document.getElementById('harga').readOnly=true;
-                                }else if(checkTujuan == 'PNBP LABUH'){
-                                    document.getElementById('harga').value = '350658';
-                                    document.getElementById('harga').readOnly=true;
-                                }else if(checkTujuan == 'Buku Kesehatan Karantina'){
-                                    document.getElementById('harga').value = '100000';
-                                    document.getElementById('harga').readOnly=true;
-                                }else{
-                                    document.getElementById('harga').value = '';
-                                    document.getElementById('harga').readOnly = false;
-                                }
-                            }else if(checkKapal == 'MAJESTIC ULTIMATE' || checkKapal =='MAJESTIC BLISS' || checkKapal == 'MAJESTIC HOPE' || checkKapal == 'ETHOS OF MAJESTIC' || checkKapal == 'NOBLE OF MAJESTIC' || checkKapal == 'UNITY OF MAJESTIC'){
-                                if(checkTujuan == 'COP Karantina'){
-                                    document.getElementById('harga').value = '85000';
-                                    document.getElementById('harga').readOnly=true;
-                                }else if(checkTujuan == 'PHQC Karantina'){
-                                    document.getElementById('harga').value = '35000';
-                                    document.getElementById('harga').readOnly=true;
-                                }else if(checkTujuan == 'PNBP LABUH'){
-                                    document.getElementById('harga').value = '550242';
-                                    document.getElementById('harga').readOnly=true;
-                                }else if(checkTujuan == 'Buku Kesehatan Karantina'){
-                                    document.getElementById('harga').value = '120000';
-                                    document.getElementById('harga').readOnly=true;
-                                }else{
-                                    document.getElementById('harga').value = '';
-                                    document.getElementById('harga').readOnly = false;
-                                }
+                    <div class="col-75">                    
+                        <select id="tujuan_pembayaran" name="tujuan_pembayaran" required onchange="showPrice(this.value)">
+                        <script>
+                            function showPrice(str) {
+                            var xhttp;
+                            if (str.length == 0) { 
+                                document.getElementById("harga").value= "";
+                                document.getElementById("nama_kapal").value="";
+                                return;
                             }
-                        ">
+                            xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                document.getElementById("harga").value = this.responseText;
+                                }
+                            };
+                            xhttp.open("GET", "ajax/getPrice.php?tujuan_pembayaran="+str+"&nama_kapal="+document.getElementById("nama_kapal").value, true);
+                            xhttp.send();   
+                            }
+                        </script>
                             <option value="" hidden>Pilih Jenis Pembayaran</option>
                             <?php 
                                 include("Fetch_Data/tujuan-pembayaran-option.php");
@@ -109,7 +88,7 @@
                         <label>Harga Pembayaran </label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="harga" id="harga" required placeholder="0" readonly="readonly"/>
+                        <input type="number" name="harga" id="harga" required placeholder="0" readOnly="readOnly"/>
                     </div>
                     <input type="button" class="changeButton" value="Change" onclick="document.getElementById('harga').readOnly=false;"/>
                 </div>

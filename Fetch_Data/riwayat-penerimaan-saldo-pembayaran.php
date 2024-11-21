@@ -34,7 +34,8 @@
             echo "<td style='width:10%;'>Rp ". number_format($row_data["pnbp_mc"], 0, '','.') ."</td>";
             echo "<td style='width:10%;'>Rp ". number_format($row_data["pnbp_rambu"], 0, '', '.') ."</td>";
             echo "<td style='width:10%;'>Rp ". number_format($row_data["buku_kesehatan_karantina"], 0, '', '.') ."</td>";
-            echo "<td>". $row_data["catatan"] ."</td>";
+            echo "<td style='width:10%;'><a href=".$row_data['foto_rincian']." target='_blank'>".$row_data['foto_rincian']."</td>";
+            echo "<td><textarea readonly>". $row_data["catatan"] ."</textarea></td>";
             //echo "<td>". $row["tipe_kapal_id"] ."</td>";
             echo "<td>";
             echo "<a href = 'form-edit-riwayat-penerimaan-saldo-pembayaran.php?id=".$row_data['id']."'>Edit</a></td>";

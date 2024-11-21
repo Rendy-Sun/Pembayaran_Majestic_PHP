@@ -14,7 +14,8 @@
     <body>
     <div class="header">
     <header><h2>Riwayat Penerimaan Saldo</h2></header>
-    </div>        <div class="content">
+    </div>        
+    <div class="content">
         <div class="scroll">
         <table id="riwayat" class="table" border="1">
             <thead>
@@ -28,6 +29,7 @@
                     <th>PNBP MASTER CABLE (MC)</th>
                     <th>PNBP RAMBU</th>
                     <th>Buku Kesehatan Karantina</th>
+                    <th>Foto Rincian</th>
                     <th>Catatan</th>
                     <th colspan="2">Action</th>
                 </tr>

@@ -56,19 +56,30 @@ include("Connection/config.php");
                     $batas=10;
                     $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1 ;
                     $halaman_awal = ($halaman>1)?($halaman*$batas) - $batas : 0;
-                
+                    $nama_kru = $_GET['pencarian'];
                     $previous = $halaman -1;
                     $next = $halaman + 1;
+                    
+                    if($nama_kru !=null){
+                        $query = "SELECT * FROM kru_kapal WHERE nama_awak LIKE '%$nama_kru%'";
+                        $data = mysqli_query($dbConnection, $query);
+                        $jumlah_data = mysqli_num_rows($data);
+                        $total_halaman = ceil($jumlah_data/$batas);
 
-                    $query = "SELECT * FROM kru_kapal";
-                    $data = mysqli_query($dbConnection, $query);
-                    $jumlah_data = mysqli_num_rows($data);
-                    $total_halaman = ceil($jumlah_data/$batas);
+                        $query = "SELECT * FROM kru_kapal WHERE nama_awak LIKE '%$nama_kru%' LIMIT $halaman_awal, $batas";
+                        $data_pembayaran = mysqli_query($dbConnection, $query);
+                        $nomor = $halaman_awal+1;   
+                    }else{
+                        $query = "SELECT * FROM kru_kapal";
+                        $data = mysqli_query($dbConnection, $query);
+                        $jumlah_data = mysqli_num_rows($data);
+                        $total_halaman = ceil($jumlah_data/$batas);
 
-                    $query = "SELECT * FROM kru_kapal LIMIT $halaman_awal, $batas";
-                    $data_pembayaran = mysqli_query($dbConnection, $query);
-                    $nomor = $halaman_awal+1;   
-                
+                        $query = "SELECT * FROM kru_kapal LIMIT $halaman_awal, $batas";
+                        $data_pembayaran = mysqli_query($dbConnection, $query);
+                        $nomor = $halaman_awal+1;   
+                    }
+                    
                     $noUrut=0;
                     if($halaman > 1){
                         $noUrut = ($halaman -1) *10; 

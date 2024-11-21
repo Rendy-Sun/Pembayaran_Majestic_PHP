@@ -10,6 +10,9 @@ input[type=text], select{
     box-sizing: border-box;
     resize: vertical;
 }
+input[type=text]{
+    margin-left: 20%;
+}
 textarea{
     width: 100%;
     padding: 12px;
