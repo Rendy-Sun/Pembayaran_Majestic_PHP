@@ -54,6 +54,17 @@ input[type=button]{
     margin-left: 35%;
     margin-top: 10px;
 }
+.changebutton{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 35%;
+    margin-top: 10px;
+}
 label{
     padding: 12px 12px 12px 0;
     display: inline-block;

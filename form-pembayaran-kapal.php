@@ -53,7 +53,7 @@
                                     document.getElementById('harga').value = '';
                                     document.getElementById('harga').readOnly = false;
                                 }
-                            }else if(checkKapal == 'MAJESTIC ULTIMATE' || checkKapal =='MAJESTIC BLISS' || checkKapal == 'MAJESTIC HOPE' || checkKapal == 'ETHOS OF MAJESTIC' || checkKapal == 'NOBLE OF MAJESTIC' || checkKapal == 'UNITY OF MAJESTIC'){
+                            }else if(checkKapal == 'MAJESTIC ULTIMATE' || checkKapal =='MAJESTIC BLISS' || checkKapal == 'MAJESTIC HOPE' || checkKapal == 'ETHOS OF MAJESTIC' || checkKapal == 'NOBLE OF MAJESTIC' || checkKapal == 'UNITY OF MAJESTIC' || checkKapal=='MAJESTIC SUPREME'){
                                 if(checkTujuan == 'COP Karantina'){
                                     document.getElementById('harga').value = '85000';
                                     document.getElementById('harga').readOnly=true;
@@ -61,10 +61,15 @@
                                     document.getElementById('harga').value = '35000';
                                     document.getElementById('harga').readOnly=true;
                                 }else if(checkTujuan == 'PNBP LABUH'){
-                                    document.getElementById('harga').value = '550242';
-                                    document.getElementById('harga').readOnly=true;
+                                    if(checkKapal == 'MAJESTIC SUPREME'){
+                                        document.getElementById('harga').value = '540540';
+                                        document.getElementById('harga').readOnly=true;
+                                    }else{
+                                        document.getElementById('harga').value = '550242';
+                                        document.getElementById('harga').readOnly=true;
+                                    }  
                                 }else if(checkTujuan == 'Buku Kesehatan Karantina'){
-                                    document.getElementById('harga').value = '120000';
+                                    document.getElementById('harga').value = '125000';
                                     document.getElementById('harga').readOnly=true;
                                 }else{
                                     document.getElementById('harga').value = '';

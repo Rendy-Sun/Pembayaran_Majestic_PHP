@@ -131,7 +131,7 @@
                         <label>Total PNBP LABUH</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" name="labuh" id="labuh" readonly="readonly" placeholder="0"/>
+                        <input type="number" name="labuh" id="labuh" readonly placeholder="0"/>
                     </div>
                 </div>
                 <div class="row">
